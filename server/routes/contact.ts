@@ -1,6 +1,6 @@
 import { RequestHandler } from "express";
 import { z } from "zod";
-import { Resend } from "resend";
+import nodemailer from "nodemailer";
 
 const ContactSchema = z.object({
   name: z.string().min(1, "Name is required"),
@@ -8,7 +8,13 @@ const ContactSchema = z.object({
   message: z.string().min(1, "Message is required"),
 });
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+const transporter = nodemailer.createTransport({
+  service: "gmail",
+  auth: {
+    user: process.env.GMAIL_USER,
+    pass: process.env.GMAIL_APP_PASSWORD,
+  },
+});
 
 export const handleContact: RequestHandler = async (req, res) => {
   try {
@@ -16,8 +22,8 @@ export const handleContact: RequestHandler = async (req, res) => {
 
     const contactEmail = "benalyst404@gmail.com";
 
-    await resend.emails.send({
-      from: "BenetS <noreply@benets.com>",
+    await transporter.sendMail({
+      from: process.env.GMAIL_USER,
       to: contactEmail,
       replyTo: validatedData.email,
       subject: `New Inquiry from ${validatedData.name}`,
