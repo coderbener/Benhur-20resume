@@ -1,4 +1,4 @@
-import { Linkedin, Twitter } from "lucide-react";
+import { Linkedin } from "lucide-react";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -58,18 +58,13 @@ export default function Footer() {
             </h4>
             <div className="flex gap-4">
               <a
-                href="#"
+                href="https://www.linkedin.com/company/benetsec/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-10 h-10 bg-gray-900 hover:bg-yellow-500/20 rounded-lg flex items-center justify-center text-gray-400 hover:text-yellow-500 transition-colors"
                 title="LinkedIn"
               >
                 <Linkedin className="w-5 h-5" />
-              </a>
-              <a
-                href="#"
-                className="w-10 h-10 bg-gray-900 hover:bg-yellow-500/20 rounded-lg flex items-center justify-center text-gray-400 hover:text-yellow-500 transition-colors"
-                title="Twitter"
-              >
-                <Twitter className="w-5 h-5" />
               </a>
             </div>
           </div>
