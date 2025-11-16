@@ -130,30 +130,28 @@ export default function Contact() {
                 <div>
                   <p className="text-gray-400 font-sans text-sm mb-1">Email</p>
                   <a
-                    href="mailto:info@benets.com"
+                    href="mailto:benalyst404@gmail.com"
                     className="text-white font-sans font-semibold text-lg hover:text-yellow-500 transition-colors"
                   >
-                    info@benets.com
+                    benalyst404@gmail.com
                   </a>
                 </div>
               </div>
             </div>
 
-            {/* Calendar */}
+            {/* Phone */}
             <div className="group">
               <div className="flex items-center gap-4 mb-4">
                 <div className="w-12 h-12 bg-gray-900 rounded-lg flex items-center justify-center group-hover:bg-yellow-500/10 transition-colors">
-                  <Calendar className="w-6 h-6 text-yellow-500" />
+                  <Phone className="w-6 h-6 text-yellow-500" />
                 </div>
                 <div>
-                  <p className="text-gray-400 font-sans text-sm mb-1">
-                    Schedule a Call
-                  </p>
+                  <p className="text-gray-400 font-sans text-sm mb-1">Phone</p>
                   <a
-                    href="#"
+                    href="tel:+919400979300"
                     className="text-white font-sans font-semibold text-lg hover:text-yellow-500 transition-colors"
                   >
-                    Book a Meeting
+                    +91 94009 79300
                   </a>
                 </div>
               </div>
