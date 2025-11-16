@@ -13,7 +13,7 @@ const services: ServiceCard[] = [
   {
     id: "starter",
     title: "Founder's Starter Pack",
-    price: "₹199",
+    price: "₹499",
     description:
       "Your first professional landing page, launched in days. Choose from our template gallery.",
     features: [
