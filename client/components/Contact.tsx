@@ -162,18 +162,13 @@ export default function Contact() {
               <p className="text-gray-400 font-sans text-sm mb-6">Follow Us</p>
               <div className="flex gap-6">
                 <a
-                  href="#"
+                  href="https://www.linkedin.com/company/benetsec/"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="w-12 h-12 bg-gray-900 hover:bg-yellow-500/20 rounded-lg flex items-center justify-center text-gray-400 hover:text-yellow-500 transition-colors"
                   title="LinkedIn"
                 >
                   <Linkedin className="w-5 h-5" />
-                </a>
-                <a
-                  href="#"
-                  className="w-12 h-12 bg-gray-900 hover:bg-yellow-500/20 rounded-lg flex items-center justify-center text-gray-400 hover:text-yellow-500 transition-colors"
-                  title="Twitter"
-                >
-                  <Twitter className="w-5 h-5" />
                 </a>
               </div>
             </div>
