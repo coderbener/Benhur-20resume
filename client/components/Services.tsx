@@ -106,7 +106,15 @@ export default function Services() {
               </ul>
 
               {/* CTA Button */}
-              <button className="w-full border border-yellow-500 text-yellow-500 hover:bg-yellow-500/10 py-3 sm:py-4 rounded-sm transition-all duration-300 font-sans font-semibold text-base flex items-center justify-center gap-2 group/btn">
+              <button
+                onClick={() => {
+                  const contactSection = document.getElementById('contact');
+                  if (contactSection) {
+                    contactSection.scrollIntoView({ behavior: 'smooth' });
+                  }
+                }}
+                className="w-full border border-yellow-500 text-yellow-500 hover:bg-yellow-500/10 py-3 sm:py-4 rounded-sm transition-all duration-300 font-sans font-semibold text-base flex items-center justify-center gap-2 group/btn"
+              >
                 {service.cta}
                 <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
               </button>
