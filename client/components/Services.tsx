@@ -27,7 +27,7 @@ const services: ServiceCard[] = [
   {
     id: "bespoke",
     title: "Bespoke Website",
-    price: "From ₹XXXXX",
+    price: "From ₹XXXX",
     description:
       "A custom, multi-page website designed and built from scratch for your unique brand.",
     features: [
