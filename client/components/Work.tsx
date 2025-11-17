@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { X } from "lucide-react";
 
 interface WorkItem {
   id: string;
@@ -137,6 +138,9 @@ const workItems: WorkItem[] = [
 
 export default function Work() {
   const [hoveredId, setHoveredId] = useState<string | null>(null);
+  const [selectedImageId, setSelectedImageId] = useState<string | null>(null);
+
+  const selectedItem = workItems.find((item) => item.id === selectedImageId);
 
   const getGridClass = (size?: string) => {
     switch (size) {
@@ -183,15 +187,18 @@ export default function Work() {
               <img
                 src={item.image}
                 alt={`Portfolio item ${item.id}`}
-                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                className="w-full h-full object-contain bg-gray-900 transition-transform duration-500 group-hover:scale-105"
               />
 
               {/* Overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-gray-950 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
-                <div className="transform translate-y-8 group-hover:translate-y-0 transition-transform duration-300">
+              <div className="absolute inset-0 bg-gradient-to-t from-gray-950 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6 cursor-pointer">
+                <div
+                  className="transform translate-y-8 group-hover:translate-y-0 transition-transform duration-300"
+                  onClick={() => setSelectedImageId(item.id)}
+                >
                   <div className="h-1 w-8 bg-yellow-500 mb-3 rounded-full"></div>
-                  <p className="text-yellow-500 font-sans text-sm font-semibold">
-                    View Project
+                  <p className="text-yellow-500 font-sans text-sm font-semibold hover:text-yellow-400">
+                    View Image
                   </p>
                 </div>
               </div>
