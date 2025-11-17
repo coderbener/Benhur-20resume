@@ -232,6 +232,45 @@ export default function Work() {
           </button>
         </div>
       </div>
+
+      {/* Image Lightbox Modal */}
+      {selectedItem && (
+        <div
+          className="fixed inset-0 z-50 bg-gray-950/95 backdrop-blur-sm flex items-center justify-center p-4 animate-fade-in"
+          onClick={() => setSelectedImageId(null)}
+        >
+          <div
+            className="relative max-w-4xl max-h-[90vh] w-full"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* Close Button */}
+            <button
+              onClick={() => setSelectedImageId(null)}
+              className="absolute -top-12 right-0 text-gray-400 hover:text-white transition-colors z-10"
+              aria-label="Close lightbox"
+            >
+              <X className="w-8 h-8" />
+            </button>
+
+            {/* Image Container */}
+            <div className="bg-gray-900 rounded-lg overflow-hidden flex items-center justify-center h-full">
+              <img
+                src={selectedItem.image}
+                alt={`Full size view ${selectedItem.id}`}
+                className="w-full h-full object-contain max-h-[90vh]"
+              />
+            </div>
+
+            {/* Navigation Info */}
+            <div className="mt-4 text-center text-gray-400 font-sans text-sm">
+              <p>
+                Image {workItems.findIndex((item) => item.id === selectedImageId) + 1} of{" "}
+                {workItems.length}
+              </p>
+            </div>
+          </div>
+        </div>
+      )}
     </section>
   );
 }
