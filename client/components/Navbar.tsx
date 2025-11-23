@@ -51,6 +51,12 @@ export default function Navbar({
               Services
             </button>
             <button
+              onClick={() => scrollToSection("careers")}
+              className="text-gray-300 hover:text-white transition-colors font-sans text-sm"
+            >
+              Careers
+            </button>
+            <button
               onClick={() => scrollToSection("contact")}
               className="text-gray-300 hover:text-white transition-colors font-sans text-sm"
             >
@@ -98,6 +104,12 @@ export default function Navbar({
                 className="block w-full text-left px-3 py-2 text-gray-300 hover:text-white hover:bg-gray-800 rounded transition-colors font-sans text-sm"
               >
                 Services
+              </button>
+              <button
+                onClick={() => scrollToSection("careers")}
+                className="block w-full text-left px-3 py-2 text-gray-300 hover:text-white hover:bg-gray-800 rounded transition-colors font-sans text-sm"
+              >
+                Careers
               </button>
               <button
                 onClick={() => scrollToSection("contact")}
