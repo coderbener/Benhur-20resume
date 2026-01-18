@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Mail, Linkedin, Phone } from "lucide-react";
+import { Mail, Linkedin, Phone, Github } from "lucide-react";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -49,10 +49,10 @@ export default function Contact() {
       <div className="max-w-7xl mx-auto">
         {/* Heading */}
         <h2 className="text-4xl sm:text-5xl md:text-5xl font-serif font-semibold tracking-tight text-white mb-4">
-          Let's Build Your Vision.
+          Let's Connect.
         </h2>
         <p className="text-gray-400 font-sans text-base mb-16 max-w-2xl">
-          Ready to transform your ideas into reality? Get in touch with our team.
+          Interested in collaborating, learning opportunities, or just want to chat about cybersecurity? Reach out!
         </p>
 
         {/* Two Column Layout */}
@@ -88,7 +88,7 @@ export default function Contact() {
                   onChange={handleChange}
                   required
                   className="w-full bg-gray-900 border border-gray-800 text-white placeholder-gray-500 font-sans text-base px-4 py-3 rounded-sm focus:outline-none focus:border-yellow-500 transition-colors"
-                  placeholder="you@example.com"
+                  placeholder="your@email.com"
                 />
               </div>
 
@@ -104,7 +104,7 @@ export default function Contact() {
                   required
                   rows={6}
                   className="w-full bg-gray-900 border border-gray-800 text-white placeholder-gray-500 font-sans text-base px-4 py-3 rounded-sm focus:outline-none focus:border-yellow-500 transition-colors resize-none"
-                  placeholder="Tell us about your project..."
+                  placeholder="Tell me about your inquiry..."
                 />
               </div>
 
@@ -130,10 +130,10 @@ export default function Contact() {
                 <div>
                   <p className="text-gray-400 font-sans text-sm mb-1">Email</p>
                   <a
-                    href="mailto:benalyst404@gmail.com"
+                    href="mailto:benhuratwork@gmail.com"
                     className="text-white font-sans font-semibold text-lg hover:text-yellow-500 transition-colors"
                   >
-                    benalyst404@gmail.com
+                    benhuratwork@gmail.com
                   </a>
                 </div>
               </div>
@@ -148,10 +148,10 @@ export default function Contact() {
                 <div>
                   <p className="text-gray-400 font-sans text-sm mb-1">Phone</p>
                   <a
-                    href="tel:+919400979300"
+                    href="tel:+919567651195"
                     className="text-white font-sans font-semibold text-lg hover:text-yellow-500 transition-colors"
                   >
-                    +91 94009 79300
+                    +91 95676 51195
                   </a>
                 </div>
               </div>
@@ -159,16 +159,35 @@ export default function Contact() {
 
             {/* Social Links */}
             <div>
-              <p className="text-gray-400 font-sans text-sm mb-6">Follow Us</p>
+              <p className="text-gray-400 font-sans text-sm mb-6">Connect With Me</p>
               <div className="flex gap-6">
                 <a
-                  href="https://www.linkedin.com/company/benetsec/"
+                  href="https://www.linkedin.com/in/benhursanthosh"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-12 h-12 bg-gray-900 hover:bg-yellow-500/20 rounded-lg flex items-center justify-center text-gray-400 hover:text-yellow-500 transition-colors"
                   title="LinkedIn"
                 >
                   <Linkedin className="w-5 h-5" />
+                </a>
+                <a
+                  href="https://github.com/coderbener"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-12 h-12 bg-gray-900 hover:bg-yellow-500/20 rounded-lg flex items-center justify-center text-gray-400 hover:text-yellow-500 transition-colors"
+                  title="GitHub"
+                >
+                  <Github className="w-5 h-5" />
+                </a>
+              </div>
+              <div className="mt-6">
+                <a
+                  href="https://tryhackme.com/p/benhuratwork"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block px-4 py-2 border border-yellow-500 text-yellow-500 hover:bg-yellow-500/10 rounded-sm transition-colors font-sans text-sm font-medium"
+                >
+                  TryHackMe Profile
                 </a>
               </div>
             </div>
