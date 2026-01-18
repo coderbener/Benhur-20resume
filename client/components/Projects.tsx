@@ -33,13 +33,13 @@ export default function Projects() {
   ];
 
   return (
-    <section id="projects" className="bg-gray-950 py-24 px-4 sm:px-6 lg:px-8">
+    <section id="projects" className="bg-white py-24 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         {/* Heading */}
-        <h2 className="text-4xl sm:text-5xl md:text-5xl font-serif font-semibold tracking-tight text-white mb-4">
-          Featured Projects.
+        <h2 className="text-4xl sm:text-5xl md:text-5xl font-serif font-semibold tracking-tight text-gray-950 mb-4">
+          Featured Projects
         </h2>
-        <p className="text-gray-400 font-sans text-base mb-16 max-w-2xl">
+        <p className="text-gray-600 font-sans text-base mb-16 max-w-2xl">
           Innovative solutions demonstrating expertise in computer vision, web development, and cybersecurity.
         </p>
 
@@ -48,10 +48,10 @@ export default function Projects() {
           {projects.map((project) => (
             <div
               key={project.id}
-              className="group border border-gray-800 hover:border-yellow-500/50 bg-gray-900/50 hover:bg-gray-900 overflow-hidden rounded-lg transition-all duration-300"
+              className="group overflow-hidden rounded-2xl transition-all duration-300 hover:shadow-xl"
             >
               {/* Project Image */}
-              <div className="relative h-64 sm:h-80 overflow-hidden bg-gray-800">
+              <div className="relative h-64 sm:h-80 overflow-hidden bg-gray-100">
                 <img
                   src={project.image}
                   alt={project.title}
@@ -60,19 +60,19 @@ export default function Projects() {
               </div>
 
               {/* Project Content */}
-              <div className="p-8 sm:p-10">
+              <div className="p-8 sm:p-10 bg-white border border-gray-200">
                 {/* Technologies */}
-                <p className="text-yellow-500 font-sans font-semibold text-sm mb-3">
+                <p className="text-blue-600 font-sans font-semibold text-sm mb-3">
                   {project.technologies}
                 </p>
 
                 {/* Title */}
-                <h3 className="text-2xl sm:text-3xl font-serif font-semibold text-white mb-4">
+                <h3 className="text-2xl sm:text-3xl font-serif font-semibold text-gray-950 mb-4">
                   {project.title}
                 </h3>
 
                 {/* Description */}
-                <p className="text-gray-400 font-sans text-base leading-relaxed mb-6">
+                <p className="text-gray-600 font-sans text-base leading-relaxed mb-6">
                   {project.description}
                 </p>
 
@@ -81,9 +81,9 @@ export default function Projects() {
                   {project.highlights.map((highlight, index) => (
                     <li
                       key={index}
-                      className="text-gray-300 font-sans text-sm flex items-start gap-3"
+                      className="text-gray-700 font-sans text-sm flex items-start gap-3"
                     >
-                      <span className="text-yellow-500 mt-1 flex-shrink-0">•</span>
+                      <span className="text-blue-600 mt-1 flex-shrink-0 font-bold">→</span>
                       <span>{highlight}</span>
                     </li>
                   ))}
