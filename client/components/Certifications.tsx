@@ -15,13 +15,13 @@ export default function Certifications() {
   ];
 
   return (
-    <section id="certifications" className="bg-gray-950 py-24 px-4 sm:px-6 lg:px-8">
+    <section id="certifications" className="bg-white py-24 px-4 sm:px-6 lg:px-8">
       <div className="max-w-5xl mx-auto">
         {/* Heading */}
-        <h2 className="text-4xl sm:text-5xl md:text-5xl font-serif font-semibold tracking-tight text-white mb-4">
-          Certifications.
+        <h2 className="text-4xl sm:text-5xl md:text-5xl font-serif font-semibold tracking-tight text-gray-950 mb-4">
+          Certifications
         </h2>
-        <p className="text-gray-400 font-sans text-base mb-16">
+        <p className="text-gray-600 font-sans text-base mb-16">
           Professional credentials and recognized achievements.
         </p>
 
@@ -30,15 +30,15 @@ export default function Certifications() {
           {certifications.map((cert) => (
             <div
               key={cert.id}
-              className="group border border-gray-800 hover:border-yellow-500/50 bg-gray-900/50 hover:bg-gray-900 p-8 sm:p-10 rounded-lg transition-all duration-300"
+              className="bg-gray-50 p-8 sm:p-10 rounded-2xl border border-gray-200 hover:shadow-lg transition-all duration-300"
             >
-              <p className="text-yellow-500 font-sans font-semibold text-base mb-3">
+              <p className="text-blue-600 font-sans font-semibold text-base mb-3">
                 {cert.issuer}
               </p>
-              <h3 className="text-2xl sm:text-2xl font-serif font-semibold text-white mb-4">
+              <h3 className="text-2xl sm:text-2xl font-serif font-semibold text-gray-950 mb-4">
                 {cert.title}
               </h3>
-              <p className="text-gray-300 font-sans text-base">
+              <p className="text-gray-700 font-sans text-base">
                 {cert.description}
               </p>
             </div>
