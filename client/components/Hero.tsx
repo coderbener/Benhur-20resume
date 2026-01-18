@@ -9,32 +9,47 @@ export default function Hero() {
   };
 
   return (
-    <section className="min-h-screen flex flex-col items-center justify-center bg-gray-950 pt-20 pb-20 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-5xl mx-auto text-center space-y-8 animate-fade-in">
-        {/* Main Headline */}
-        <h1 className="text-5xl sm:text-6xl md:text-7xl font-serif font-semibold tracking-tight text-white leading-tight">
-          Benhur<br />
-          Santhosh.
-        </h1>
+    <section className="min-h-screen flex flex-col items-center justify-center bg-white pt-20 pb-20 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-5xl mx-auto w-full space-y-8 animate-fade-in">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          {/* Left side - Text */}
+          <div className="space-y-6">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-serif font-semibold tracking-tight text-gray-950 leading-tight">
+              Benhur<br />
+              Santhosh
+            </h1>
 
-        {/* Sub-headline */}
-        <p className="text-lg sm:text-xl md:text-2xl font-sans text-gray-300 max-w-3xl mx-auto leading-relaxed">
-          Final year Computer Science student specializing in Cybersecurity, Penetration Testing, and Ethical Hacking.
-        </p>
+            {/* Sub-headline */}
+            <p className="text-base sm:text-lg text-gray-600 leading-relaxed">
+              Final year Computer Science student specializing in <span className="font-semibold text-blue-600">Cybersecurity</span>, Penetration Testing, and Ethical Hacking.
+            </p>
 
-        {/* CTA Button */}
-        <div className="pt-8">
-          <button
-            onClick={scrollToProjects}
-            className="bg-yellow-500 text-gray-950 hover:bg-yellow-400 px-8 sm:px-10 py-3 sm:py-4 rounded-sm transition-all duration-300 font-sans font-semibold text-base sm:text-lg"
-          >
-            View My Projects
-          </button>
+            {/* CTA Button */}
+            <div>
+              <button
+                onClick={scrollToProjects}
+                className="bg-blue-600 text-white hover:bg-blue-700 px-6 sm:px-8 py-3 rounded-lg transition-all duration-300 font-sans font-semibold text-base"
+              >
+                View My Work
+              </button>
+            </div>
+          </div>
+
+          {/* Right side - Photo */}
+          <div className="flex justify-center">
+            <div className="relative">
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets%2Fbc603bacd4e645ed8ab163ef56e09eb6%2F2306b22abf6b4b32a323d34fcb6b0dc6?format=webp&width=800"
+                alt="Benhur Santhosh"
+                className="w-80 h-80 rounded-2xl object-cover shadow-lg"
+              />
+            </div>
+          </div>
         </div>
 
         {/* Scroll Indicator */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-          <ChevronDown className="w-6 h-6 text-yellow-500" />
+        <div className="flex justify-center mt-12 animate-bounce">
+          <ChevronDown className="w-6 h-6 text-blue-600" />
         </div>
       </div>
     </section>
