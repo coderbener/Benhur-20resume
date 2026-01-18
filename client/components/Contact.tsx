@@ -45,13 +45,13 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="bg-gray-50 py-24 px-4 sm:px-6 lg:px-8">
+    <section id="contact" className="bg-gradient-to-b from-slate-900 via-slate-950 to-slate-950 py-24 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         {/* Heading */}
-        <h2 className="text-4xl sm:text-5xl md:text-5xl font-serif font-semibold tracking-tight text-gray-950 mb-4">
+        <h2 className="text-4xl sm:text-5xl md:text-5xl font-serif font-bold tracking-tight mb-4 bg-gradient-to-r from-purple-300 to-cyan-300 bg-clip-text text-transparent">
           Let's Connect
         </h2>
-        <p className="text-gray-600 font-sans text-base mb-16 max-w-2xl">
+        <p className="text-gray-400 font-sans text-base mb-16 max-w-2xl">
           Interested in collaborating, learning opportunities, or just want to chat about cybersecurity? Reach out!
         </p>
 
@@ -62,7 +62,7 @@ export default function Contact() {
             <form onSubmit={handleSubmit} className="space-y-6">
               {/* Name Input */}
               <div>
-                <label className="block text-gray-950 font-sans text-sm font-semibold mb-3">
+                <label className="block text-white font-sans text-sm font-semibold mb-3">
                   Name
                 </label>
                 <input
@@ -71,14 +71,14 @@ export default function Contact() {
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  className="w-full bg-white border border-gray-300 text-gray-950 placeholder-gray-400 font-sans text-base px-4 py-3 rounded-lg focus:outline-none focus:border-blue-600 focus:ring-2 focus:ring-blue-100 transition-colors"
+                  className="w-full bg-slate-800/50 border border-purple-500/30 text-white placeholder-gray-400 font-sans text-base px-4 py-3 rounded-lg focus:outline-none focus:border-purple-500 focus:ring-2 focus:ring-purple-500/20 transition-all duration-300"
                   placeholder="Your name"
                 />
               </div>
 
               {/* Email Input */}
               <div>
-                <label className="block text-gray-950 font-sans text-sm font-semibold mb-3">
+                <label className="block text-white font-sans text-sm font-semibold mb-3">
                   Email
                 </label>
                 <input
@@ -87,14 +87,14 @@ export default function Contact() {
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className="w-full bg-white border border-gray-300 text-gray-950 placeholder-gray-400 font-sans text-base px-4 py-3 rounded-lg focus:outline-none focus:border-blue-600 focus:ring-2 focus:ring-blue-100 transition-colors"
+                  className="w-full bg-slate-800/50 border border-purple-500/30 text-white placeholder-gray-400 font-sans text-base px-4 py-3 rounded-lg focus:outline-none focus:border-purple-500 focus:ring-2 focus:ring-purple-500/20 transition-all duration-300"
                   placeholder="your@email.com"
                 />
               </div>
 
               {/* Message Input */}
               <div>
-                <label className="block text-gray-950 font-sans text-sm font-semibold mb-3">
+                <label className="block text-white font-sans text-sm font-semibold mb-3">
                   Message
                 </label>
                 <textarea
@@ -103,7 +103,7 @@ export default function Contact() {
                   onChange={handleChange}
                   required
                   rows={6}
-                  className="w-full bg-white border border-gray-300 text-gray-950 placeholder-gray-400 font-sans text-base px-4 py-3 rounded-lg focus:outline-none focus:border-blue-600 focus:ring-2 focus:ring-blue-100 transition-colors resize-none"
+                  className="w-full bg-slate-800/50 border border-purple-500/30 text-white placeholder-gray-400 font-sans text-base px-4 py-3 rounded-lg focus:outline-none focus:border-purple-500 focus:ring-2 focus:ring-purple-500/20 transition-all duration-300 resize-none"
                   placeholder="Tell me about your inquiry..."
                 />
               </div>
@@ -112,7 +112,7 @@ export default function Contact() {
               <button
                 type="submit"
                 disabled={isLoading || submitted}
-                className="w-full bg-blue-600 text-white hover:bg-blue-700 disabled:bg-gray-400 py-3 sm:py-4 rounded-lg transition-all duration-300 font-sans font-semibold text-base"
+                className="w-full bg-gradient-to-r from-purple-600 to-cyan-600 text-white hover:shadow-lg hover:shadow-purple-500/50 disabled:opacity-50 py-3 sm:py-4 rounded-lg transition-all duration-300 font-sans font-semibold text-base"
               >
                 {submitted ? "Message Sent! 🎉" : isLoading ? "Sending..." : "Send Inquiry"}
               </button>
@@ -123,15 +123,15 @@ export default function Contact() {
           <div className="space-y-10">
             {/* Email */}
             <div>
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <Mail className="w-6 h-6 text-blue-600" />
+              <div className="flex items-start gap-4 group">
+                <div className="w-12 h-12 bg-gradient-to-br from-purple-600/20 to-cyan-600/20 rounded-lg flex items-center justify-center flex-shrink-0 border border-purple-500/30 group-hover:border-purple-500/60 transition-all">
+                  <Mail className="w-6 h-6 text-purple-400" />
                 </div>
                 <div>
-                  <p className="text-gray-600 font-sans text-sm mb-1 font-semibold">Email</p>
+                  <p className="text-gray-400 font-sans text-sm mb-1 font-semibold">Email</p>
                   <a
                     href="mailto:benhuratwork@gmail.com"
-                    className="text-gray-950 font-sans font-semibold text-lg hover:text-blue-600 transition-colors"
+                    className="text-white font-sans font-semibold text-lg hover:text-purple-300 transition-colors"
                   >
                     benhuratwork@gmail.com
                   </a>
@@ -141,15 +141,15 @@ export default function Contact() {
 
             {/* Phone */}
             <div>
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <Phone className="w-6 h-6 text-blue-600" />
+              <div className="flex items-start gap-4 group">
+                <div className="w-12 h-12 bg-gradient-to-br from-purple-600/20 to-cyan-600/20 rounded-lg flex items-center justify-center flex-shrink-0 border border-purple-500/30 group-hover:border-purple-500/60 transition-all">
+                  <Phone className="w-6 h-6 text-cyan-400" />
                 </div>
                 <div>
-                  <p className="text-gray-600 font-sans text-sm mb-1 font-semibold">Phone</p>
+                  <p className="text-gray-400 font-sans text-sm mb-1 font-semibold">Phone</p>
                   <a
                     href="tel:+919567651195"
-                    className="text-gray-950 font-sans font-semibold text-lg hover:text-blue-600 transition-colors"
+                    className="text-white font-sans font-semibold text-lg hover:text-cyan-300 transition-colors"
                   >
                     +91 95676 51195
                   </a>
@@ -159,13 +159,13 @@ export default function Contact() {
 
             {/* Social Links */}
             <div>
-              <p className="text-gray-700 font-sans text-sm mb-6 font-semibold">Connect With Me</p>
+              <p className="text-gray-300 font-sans text-sm mb-6 font-semibold">Connect With Me</p>
               <div className="flex gap-4">
                 <a
                   href="https://www.linkedin.com/in/benhursanthosh"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-12 h-12 bg-blue-100 hover:bg-blue-200 rounded-lg flex items-center justify-center text-blue-600 transition-colors"
+                  className="w-12 h-12 bg-gradient-to-br from-purple-600/20 to-cyan-600/20 border border-purple-500/30 hover:border-purple-500/60 rounded-lg flex items-center justify-center text-purple-400 hover:text-purple-300 transition-all"
                   title="LinkedIn"
                 >
                   <Linkedin className="w-5 h-5" />
@@ -174,7 +174,7 @@ export default function Contact() {
                   href="https://github.com/coderbener"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-12 h-12 bg-blue-100 hover:bg-blue-200 rounded-lg flex items-center justify-center text-blue-600 transition-colors"
+                  className="w-12 h-12 bg-gradient-to-br from-purple-600/20 to-cyan-600/20 border border-purple-500/30 hover:border-purple-500/60 rounded-lg flex items-center justify-center text-cyan-400 hover:text-cyan-300 transition-all"
                   title="GitHub"
                 >
                   <Github className="w-5 h-5" />
@@ -185,7 +185,7 @@ export default function Contact() {
                   href="https://tryhackme.com/p/benhuratwork"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-block px-5 py-2 bg-blue-600 text-white hover:bg-blue-700 rounded-lg transition-colors font-sans text-sm font-medium"
+                  className="inline-block px-5 py-2 bg-gradient-to-r from-purple-600 to-cyan-600 text-white hover:shadow-lg hover:shadow-purple-500/50 rounded-lg transition-all font-sans text-sm font-medium"
                 >
                   TryHackMe Profile
                 </a>
