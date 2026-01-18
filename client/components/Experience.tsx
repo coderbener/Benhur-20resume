@@ -27,13 +27,13 @@ export default function Experience() {
   ];
 
   return (
-    <section id="experience" className="bg-gray-950 py-24 px-4 sm:px-6 lg:px-8">
+    <section id="experience" className="bg-white py-24 px-4 sm:px-6 lg:px-8">
       <div className="max-w-5xl mx-auto">
         {/* Heading */}
-        <h2 className="text-4xl sm:text-5xl md:text-5xl font-serif font-semibold tracking-tight text-white mb-4">
-          Work Experience.
+        <h2 className="text-4xl sm:text-5xl md:text-5xl font-serif font-semibold tracking-tight text-gray-950 mb-4">
+          Work Experience
         </h2>
-        <p className="text-gray-400 font-sans text-base mb-16">
+        <p className="text-gray-600 font-sans text-base mb-16">
           Professional internships and hands-on learning.
         </p>
 
@@ -42,22 +42,22 @@ export default function Experience() {
           {experiences.map((exp) => (
             <div
               key={exp.id}
-              className="group border border-gray-800 hover:border-yellow-500/50 bg-gray-900/50 hover:bg-gray-900 p-8 sm:p-10 rounded-lg transition-all duration-300"
+              className="border-l-4 border-blue-600 pl-8 py-4"
             >
               <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4 mb-4">
                 <div className="flex-grow">
-                  <h3 className="text-2xl sm:text-2xl font-serif font-semibold text-white">
+                  <h3 className="text-2xl sm:text-2xl font-serif font-semibold text-gray-950">
                     {exp.position}
                   </h3>
-                  <p className="text-yellow-500 font-sans font-semibold text-base mt-2">
+                  <p className="text-blue-600 font-sans font-semibold text-base mt-2">
                     {exp.company}
                   </p>
-                  <p className="text-gray-400 font-sans text-sm mt-1">
+                  <p className="text-gray-600 font-sans text-sm mt-1">
                     {exp.location}
                   </p>
                 </div>
                 <div className="text-right">
-                  <p className="text-yellow-500 font-sans font-semibold text-base whitespace-nowrap">
+                  <p className="text-gray-600 font-sans font-semibold text-base whitespace-nowrap">
                     {exp.period}
                   </p>
                 </div>
@@ -68,9 +68,9 @@ export default function Experience() {
                 {exp.achievements.map((achievement, index) => (
                   <li
                     key={index}
-                    className="text-gray-300 font-sans text-sm flex gap-3 items-start"
+                    className="text-gray-700 font-sans text-sm flex gap-3 items-start"
                   >
-                    <span className="text-yellow-500 mt-1.5 flex-shrink-0">•</span>
+                    <span className="text-blue-600 mt-1.5 flex-shrink-0 font-bold">→</span>
                     <span>{achievement}</span>
                   </li>
                 ))}
