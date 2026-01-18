@@ -33,46 +33,47 @@ export default function Projects() {
   ];
 
   return (
-    <section id="projects" className="bg-white py-24 px-4 sm:px-6 lg:px-8">
+    <section id="projects" className="bg-gradient-to-b from-slate-900 to-slate-950 py-24 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         {/* Heading */}
-        <h2 className="text-4xl sm:text-5xl md:text-5xl font-serif font-semibold tracking-tight text-gray-950 mb-4">
+        <h2 className="text-4xl sm:text-5xl md:text-5xl font-serif font-bold tracking-tight mb-4 bg-gradient-to-r from-purple-300 to-cyan-300 bg-clip-text text-transparent">
           Featured Projects
         </h2>
-        <p className="text-gray-600 font-sans text-base mb-16 max-w-2xl">
+        <p className="text-gray-400 font-sans text-base mb-16 max-w-2xl">
           Innovative solutions demonstrating expertise in computer vision, web development, and cybersecurity.
         </p>
 
         {/* Projects Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {projects.map((project) => (
             <div
               key={project.id}
-              className="group overflow-hidden rounded-2xl transition-all duration-300 hover:shadow-xl"
+              className="group relative overflow-hidden rounded-xl transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-purple-500/20 border border-purple-500/20 bg-slate-800/40 backdrop-blur-sm"
             >
               {/* Project Image */}
-              <div className="relative h-64 sm:h-80 overflow-hidden bg-gray-100">
+              <div className="relative h-64 sm:h-80 overflow-hidden bg-gradient-to-br from-slate-700 to-slate-900">
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                 />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity"></div>
               </div>
 
               {/* Project Content */}
-              <div className="p-8 sm:p-10 bg-white border border-gray-200">
+              <div className="p-8 sm:p-10 relative z-10">
                 {/* Technologies */}
-                <p className="text-blue-600 font-sans font-semibold text-sm mb-3">
+                <p className="text-cyan-400 font-sans font-semibold text-sm mb-3 tracking-wide">
                   {project.technologies}
                 </p>
 
                 {/* Title */}
-                <h3 className="text-2xl sm:text-3xl font-serif font-semibold text-gray-950 mb-4">
+                <h3 className="text-2xl sm:text-3xl font-serif font-bold text-white mb-4">
                   {project.title}
                 </h3>
 
                 {/* Description */}
-                <p className="text-gray-600 font-sans text-base leading-relaxed mb-6">
+                <p className="text-gray-300 font-sans text-base leading-relaxed mb-6">
                   {project.description}
                 </p>
 
@@ -81,9 +82,9 @@ export default function Projects() {
                   {project.highlights.map((highlight, index) => (
                     <li
                       key={index}
-                      className="text-gray-700 font-sans text-sm flex items-start gap-3"
+                      className="text-gray-300 font-sans text-sm flex items-start gap-3"
                     >
-                      <span className="text-blue-600 mt-1 flex-shrink-0 font-bold">→</span>
+                      <span className="text-purple-400 mt-1 flex-shrink-0 font-bold">✓</span>
                       <span>{highlight}</span>
                     </li>
                   ))}
