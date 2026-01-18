@@ -40,8 +40,23 @@ export default function SplashScreen({ onComplete }: SplashScreenProps) {
             }
           }
 
+          @keyframes underline-reveal {
+            0% {
+              width: 0;
+              opacity: 0;
+            }
+            100% {
+              width: 6rem;
+              opacity: 1;
+            }
+          }
+
           .text-reveal {
             animation: text-reveal 2.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+          }
+
+          .underline-reveal {
+            animation: underline-reveal 2.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards 0.3s both;
           }
         `}
       </style>
@@ -57,8 +72,8 @@ export default function SplashScreen({ onComplete }: SplashScreenProps) {
           Benhur
         </h1>
         <div
-          className={`mt-8 h-1 bg-gradient-to-r from-purple-500/0 via-cyan-400 to-purple-500/0 transition-all duration-1000 ${
-            isExiting ? "w-0 opacity-0" : "w-24 opacity-100 animate-pulse"
+          className={`mt-8 h-1 bg-gradient-to-r from-purple-500/0 via-cyan-400 to-purple-500/0 ${
+            isExiting ? "w-0 opacity-0 transition-all duration-1000" : "underline-reveal animate-pulse"
           }`}
         ></div>
       </div>
