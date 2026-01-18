@@ -32,35 +32,41 @@ export default function Navbar({
               href="/"
               className="text-2xl font-serif font-semibold tracking-tight text-white"
             >
-              BenetS
+              Benhur.
             </a>
           </div>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-12">
             <button
-              onClick={() => scrollToSection("work")}
+              onClick={() => scrollToSection("projects")}
               className="text-gray-300 hover:text-white transition-colors font-sans text-sm"
             >
-              Work
+              Projects
             </button>
             <button
-              onClick={() => scrollToSection("services")}
+              onClick={() => scrollToSection("skills")}
               className="text-gray-300 hover:text-white transition-colors font-sans text-sm"
             >
-              Services
+              Skills
             </button>
             <button
-              onClick={() => scrollToSection("careers")}
+              onClick={() => scrollToSection("experience")}
               className="text-gray-300 hover:text-white transition-colors font-sans text-sm"
             >
-              Careers
+              Experience
+            </button>
+            <button
+              onClick={() => scrollToSection("education")}
+              className="text-gray-300 hover:text-white transition-colors font-sans text-sm"
+            >
+              Education
             </button>
             <button
               onClick={() => scrollToSection("contact")}
               className="text-gray-300 hover:text-white transition-colors font-sans text-sm"
             >
-              About
+              Contact
             </button>
           </div>
 
@@ -70,7 +76,7 @@ export default function Navbar({
               onClick={() => scrollToSection("contact")}
               className="border border-yellow-500 text-yellow-500 hover:bg-yellow-500/10 px-6 py-2 rounded-sm transition-colors font-sans text-sm font-medium"
             >
-              Start Your Project
+              Get In Touch
             </button>
           </div>
 
@@ -94,34 +100,40 @@ export default function Navbar({
           <div className="md:hidden bg-gray-900 border-t border-gray-800">
             <div className="px-2 pt-2 pb-3 space-y-1">
               <button
-                onClick={() => scrollToSection("work")}
+                onClick={() => scrollToSection("projects")}
                 className="block w-full text-left px-3 py-2 text-gray-300 hover:text-white hover:bg-gray-800 rounded transition-colors font-sans text-sm"
               >
-                Work
+                Projects
               </button>
               <button
-                onClick={() => scrollToSection("services")}
+                onClick={() => scrollToSection("skills")}
                 className="block w-full text-left px-3 py-2 text-gray-300 hover:text-white hover:bg-gray-800 rounded transition-colors font-sans text-sm"
               >
-                Services
+                Skills
               </button>
               <button
-                onClick={() => scrollToSection("careers")}
+                onClick={() => scrollToSection("experience")}
                 className="block w-full text-left px-3 py-2 text-gray-300 hover:text-white hover:bg-gray-800 rounded transition-colors font-sans text-sm"
               >
-                Careers
+                Experience
+              </button>
+              <button
+                onClick={() => scrollToSection("education")}
+                className="block w-full text-left px-3 py-2 text-gray-300 hover:text-white hover:bg-gray-800 rounded transition-colors font-sans text-sm"
+              >
+                Education
               </button>
               <button
                 onClick={() => scrollToSection("contact")}
                 className="block w-full text-left px-3 py-2 text-gray-300 hover:text-white hover:bg-gray-800 rounded transition-colors font-sans text-sm"
               >
-                About
+                Contact
               </button>
               <button
                 onClick={() => scrollToSection("contact")}
                 className="block w-full text-left px-3 py-2 border border-yellow-500 text-yellow-500 hover:bg-yellow-500/10 rounded mt-4 transition-colors font-sans text-sm font-medium"
               >
-                Start Your Project
+                Get In Touch
               </button>
             </div>
           </div>
