@@ -27,54 +27,63 @@ export default function Experience() {
   ];
 
   return (
-    <section id="experience" className="bg-white py-24 px-4 sm:px-6 lg:px-8">
+    <section id="experience" className="bg-gradient-to-b from-slate-950 to-slate-900 py-24 px-4 sm:px-6 lg:px-8">
       <div className="max-w-5xl mx-auto">
         {/* Heading */}
-        <h2 className="text-4xl sm:text-5xl md:text-5xl font-serif font-semibold tracking-tight text-gray-950 mb-4">
+        <h2 className="text-4xl sm:text-5xl md:text-5xl font-serif font-bold tracking-tight mb-4 bg-gradient-to-r from-purple-300 to-cyan-300 bg-clip-text text-transparent">
           Work Experience
         </h2>
-        <p className="text-gray-600 font-sans text-base mb-16">
+        <p className="text-gray-400 font-sans text-base mb-16">
           Professional internships and hands-on learning.
         </p>
 
         {/* Experience Timeline */}
-        <div className="space-y-8">
-          {experiences.map((exp) => (
+        <div className="space-y-8 relative">
+          {/* Timeline line */}
+          <div className="absolute left-6 top-0 bottom-0 w-1 bg-gradient-to-b from-purple-500 to-cyan-500"></div>
+
+          {experiences.map((exp, index) => (
             <div
               key={exp.id}
-              className="border-l-4 border-blue-600 pl-8 py-4"
+              className="relative pl-20"
             >
-              <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4 mb-4">
-                <div className="flex-grow">
-                  <h3 className="text-2xl sm:text-2xl font-serif font-semibold text-gray-950">
-                    {exp.position}
-                  </h3>
-                  <p className="text-blue-600 font-sans font-semibold text-base mt-2">
-                    {exp.company}
-                  </p>
-                  <p className="text-gray-600 font-sans text-sm mt-1">
-                    {exp.location}
-                  </p>
-                </div>
-                <div className="text-right">
-                  <p className="text-gray-600 font-sans font-semibold text-base whitespace-nowrap">
-                    {exp.period}
-                  </p>
-                </div>
-              </div>
+              {/* Timeline dot */}
+              <div className="absolute -left-4 top-2 w-6 h-6 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-full border-4 border-slate-900"></div>
 
-              {/* Achievements */}
-              <ul className="space-y-3 mt-6">
-                {exp.achievements.map((achievement, index) => (
-                  <li
-                    key={index}
-                    className="text-gray-700 font-sans text-sm flex gap-3 items-start"
-                  >
-                    <span className="text-blue-600 mt-1.5 flex-shrink-0 font-bold">→</span>
-                    <span>{achievement}</span>
-                  </li>
-                ))}
-              </ul>
+              {/* Content */}
+              <div className="bg-slate-800/50 backdrop-blur-sm border border-purple-500/30 rounded-lg p-8 hover:border-purple-500/60 hover:shadow-xl hover:shadow-purple-500/10 transition-all duration-300">
+                <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4 mb-4">
+                  <div className="flex-grow">
+                    <h3 className="text-2xl sm:text-2xl font-serif font-bold text-white">
+                      {exp.position}
+                    </h3>
+                    <p className="text-purple-400 font-sans font-semibold text-base mt-2">
+                      {exp.company}
+                    </p>
+                    <p className="text-gray-400 font-sans text-sm mt-1">
+                      {exp.location}
+                    </p>
+                  </div>
+                  <div className="text-right">
+                    <p className="text-cyan-400 font-sans font-semibold text-base whitespace-nowrap">
+                      {exp.period}
+                    </p>
+                  </div>
+                </div>
+
+                {/* Achievements */}
+                <ul className="space-y-3 mt-6">
+                  {exp.achievements.map((achievement, index) => (
+                    <li
+                      key={index}
+                      className="text-gray-300 font-sans text-sm flex gap-3 items-start"
+                    >
+                      <span className="text-cyan-400 mt-1.5 flex-shrink-0 font-bold">→</span>
+                      <span>{achievement}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
           ))}
         </div>
