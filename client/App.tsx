@@ -10,6 +10,7 @@ import { useState } from "react";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import SplashScreen from "./components/SplashScreen";
+import InteractiveBackground from "./components/InteractiveBackground";
 
 const queryClient = new QueryClient();
 
@@ -19,6 +20,7 @@ const AppContent = () => {
   return (
     <>
       {showSplash && <SplashScreen onComplete={() => setShowSplash(false)} />}
+      <InteractiveBackground />
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
