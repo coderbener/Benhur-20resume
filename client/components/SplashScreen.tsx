@@ -25,16 +25,23 @@ export default function SplashScreen({ onComplete }: SplashScreenProps) {
       <style>
         {`
           @keyframes text-reveal {
-            from {
+            0% {
               clip-path: inset(0 100% 0 0);
+              letter-spacing: 0.1em;
+              opacity: 0;
             }
-            to {
+            40% {
+              opacity: 1;
+            }
+            100% {
               clip-path: inset(0 0 0 0);
+              letter-spacing: -0.02em;
+              opacity: 1;
             }
           }
 
           .text-reveal {
-            animation: text-reveal 2.5s ease-out forwards;
+            animation: text-reveal 2.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
           }
         `}
       </style>
