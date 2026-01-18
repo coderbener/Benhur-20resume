@@ -49,7 +49,7 @@ export default function Hero() {
             <div className="relative group">
               <div className="absolute -inset-1 bg-gradient-to-r from-purple-600 via-cyan-500 to-purple-600 rounded-full blur-2xl opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-pulse"></div>
               <img
-                src="https://cdn.builder.io/api/v1/image/assets%2Fbc603bacd4e645ed8ab163ef56e09eb6%2F2306b22abf6b4b32a323d34fcb6b0dc6?format=webp&width=800"
+                src="https://cdn.builder.io/api/v1/image/assets%2Fbc603bacd4e645ed8ab163ef56e09eb6%2Fba3925f1441e4da8ae9b87b808cd5493?format=webp&width=800"
                 alt="Benhur Santhosh"
                 className="relative w-80 h-80 rounded-full object-cover shadow-2xl border border-purple-500/30"
               />
