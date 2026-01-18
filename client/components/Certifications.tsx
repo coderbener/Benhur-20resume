@@ -15,13 +15,13 @@ export default function Certifications() {
   ];
 
   return (
-    <section id="certifications" className="bg-white py-24 px-4 sm:px-6 lg:px-8">
+    <section id="certifications" className="bg-gradient-to-b from-slate-950 to-slate-900 py-24 px-4 sm:px-6 lg:px-8">
       <div className="max-w-5xl mx-auto">
         {/* Heading */}
-        <h2 className="text-4xl sm:text-5xl md:text-5xl font-serif font-semibold tracking-tight text-gray-950 mb-4">
+        <h2 className="text-4xl sm:text-5xl md:text-5xl font-serif font-bold tracking-tight mb-4 bg-gradient-to-r from-purple-300 to-cyan-300 bg-clip-text text-transparent">
           Certifications
         </h2>
-        <p className="text-gray-600 font-sans text-base mb-16">
+        <p className="text-gray-400 font-sans text-base mb-16">
           Professional credentials and recognized achievements.
         </p>
 
@@ -30,15 +30,15 @@ export default function Certifications() {
           {certifications.map((cert) => (
             <div
               key={cert.id}
-              className="bg-gray-50 p-8 sm:p-10 rounded-2xl border border-gray-200 hover:shadow-lg transition-all duration-300"
+              className="group relative p-8 sm:p-10 rounded-lg border border-purple-500/30 bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm hover:border-purple-500/60 hover:shadow-xl hover:shadow-purple-500/10 hover:-translate-y-1 transition-all duration-300"
             >
-              <p className="text-blue-600 font-sans font-semibold text-base mb-3">
+              <p className="text-cyan-400 font-sans font-semibold text-base mb-3 tracking-wide">
                 {cert.issuer}
               </p>
-              <h3 className="text-2xl sm:text-2xl font-serif font-semibold text-gray-950 mb-4">
+              <h3 className="text-2xl sm:text-2xl font-serif font-bold text-white mb-4 group-hover:text-purple-300 transition-colors">
                 {cert.title}
               </h3>
-              <p className="text-gray-700 font-sans text-base">
+              <p className="text-gray-300 font-sans text-base">
                 {cert.description}
               </p>
             </div>
