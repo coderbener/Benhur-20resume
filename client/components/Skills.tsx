@@ -15,13 +15,13 @@ export default function Skills() {
   ];
 
   return (
-    <section id="skills" className="bg-gray-950 py-24 px-4 sm:px-6 lg:px-8">
+    <section id="skills" className="bg-gray-50 py-24 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         {/* Heading */}
-        <h2 className="text-4xl sm:text-5xl md:text-5xl font-serif font-semibold tracking-tight text-white mb-4">
-          Technical Skills.
+        <h2 className="text-4xl sm:text-5xl md:text-5xl font-serif font-semibold tracking-tight text-gray-950 mb-4">
+          Technical Skills
         </h2>
-        <p className="text-gray-400 font-sans text-base mb-16 max-w-2xl">
+        <p className="text-gray-600 font-sans text-base mb-16 max-w-2xl">
           A comprehensive toolkit for cybersecurity and software development.
         </p>
 
@@ -30,10 +30,10 @@ export default function Skills() {
           {skillCategories.map((skillGroup, index) => (
             <div
               key={index}
-              className="group border border-gray-800 hover:border-yellow-500/50 bg-gray-900/50 hover:bg-gray-900 p-8 sm:p-12 rounded-lg transition-all duration-300"
+              className="bg-white p-8 sm:p-10 rounded-2xl border border-gray-200 hover:shadow-lg transition-all duration-300"
             >
               {/* Category Title */}
-              <h3 className="text-2xl sm:text-3xl font-serif font-semibold text-white mb-8">
+              <h3 className="text-2xl sm:text-3xl font-serif font-semibold text-gray-950 mb-8">
                 {skillGroup.category}
               </h3>
 
@@ -42,9 +42,9 @@ export default function Skills() {
                 {skillGroup.skills.map((skill, skillIndex) => (
                   <li
                     key={skillIndex}
-                    className="text-gray-300 font-sans text-base flex items-center gap-3"
+                    className="text-gray-700 font-sans text-base flex items-center gap-3"
                   >
-                    <span className="text-yellow-500 text-lg">•</span>
+                    <span className="text-blue-600 text-lg font-bold">✓</span>
                     <span>{skill}</span>
                   </li>
                 ))}
