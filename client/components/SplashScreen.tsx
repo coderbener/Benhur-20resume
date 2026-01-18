@@ -40,11 +40,12 @@ export default function SplashScreen({ onComplete }: SplashScreenProps) {
       </style>
       <div className="flex flex-col items-center justify-center">
         <h1
-          className={`text-7xl sm:text-8xl font-serif font-bold tracking-tight bg-gradient-to-r from-purple-300 via-purple-200 to-cyan-300 bg-clip-text text-transparent ${
+          className={`text-7xl sm:text-8xl font-bold tracking-tighter bg-gradient-to-r from-purple-300 via-purple-200 to-cyan-300 bg-clip-text text-transparent ${
             isExiting
               ? "scale-90 opacity-0 transition-all duration-1000"
               : "scale-100 text-reveal"
           }`}
+          style={{ fontFamily: '"Space Grotesk", sans-serif', letterSpacing: '-0.02em' }}
         >
           Benhur
         </h1>
