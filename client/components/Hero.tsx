@@ -9,47 +9,59 @@ export default function Hero() {
   };
 
   return (
-    <section className="min-h-screen flex flex-col items-center justify-center bg-white pt-20 pb-20 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-5xl mx-auto w-full space-y-8 animate-fade-in">
+    <section className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20 pb-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+      {/* Animated background elements */}
+      <div className="absolute top-0 -left-4 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob"></div>
+      <div className="absolute top-0 -right-4 w-72 h-72 bg-cyan-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-2000"></div>
+      <div className="absolute -bottom-8 left-20 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-4000"></div>
+
+      <div className="max-w-5xl mx-auto w-full space-y-8 animate-fade-in relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           {/* Left side - Text */}
           <div className="space-y-6">
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-serif font-semibold tracking-tight text-gray-950 leading-tight">
-              Benhur<br />
-              Santhosh
-            </h1>
+            <div className="space-y-4">
+              <div className="inline-block px-4 py-2 bg-purple-500/20 border border-purple-500/50 rounded-full mb-4">
+                <p className="text-purple-300 text-sm font-semibold">Welcome to my portfolio</p>
+              </div>
+              <h1 className="text-5xl sm:text-6xl md:text-7xl font-serif font-bold tracking-tighter text-white leading-tight bg-clip-text text-transparent bg-gradient-to-r from-purple-200 via-purple-400 to-cyan-300">
+                Benhur<br />
+                Santhosh
+              </h1>
+            </div>
 
             {/* Sub-headline */}
-            <p className="text-base sm:text-lg text-gray-600 leading-relaxed">
-              Final year Computer Science student specializing in <span className="font-semibold text-blue-600">Cybersecurity</span>, Penetration Testing, and Ethical Hacking.
+            <p className="text-base sm:text-lg text-gray-300 leading-relaxed max-w-lg">
+              Final year CS student specializing in <span className="text-purple-300 font-semibold">Cybersecurity</span>, <span className="text-cyan-300 font-semibold">Penetration Testing</span>, and <span className="text-purple-300 font-semibold">Ethical Hacking</span>.
             </p>
 
-            {/* CTA Button */}
-            <div>
+            {/* CTA Buttons */}
+            <div className="flex gap-4 pt-4">
               <button
                 onClick={scrollToProjects}
-                className="bg-blue-600 text-white hover:bg-blue-700 px-6 sm:px-8 py-3 rounded-lg transition-all duration-300 font-sans font-semibold text-base"
+                className="group relative px-8 py-4 bg-gradient-to-r from-purple-600 to-purple-700 text-white font-semibold rounded-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:shadow-purple-500/50"
               >
-                View My Work
+                <span className="relative z-10">View My Work</span>
+                <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-purple-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </button>
             </div>
           </div>
 
           {/* Right side - Photo */}
           <div className="flex justify-center">
-            <div className="relative">
+            <div className="relative group">
+              <div className="absolute -inset-1 bg-gradient-to-r from-purple-600 via-cyan-500 to-purple-600 rounded-2xl blur-2xl opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-pulse"></div>
               <img
                 src="https://cdn.builder.io/api/v1/image/assets%2Fbc603bacd4e645ed8ab163ef56e09eb6%2F2306b22abf6b4b32a323d34fcb6b0dc6?format=webp&width=800"
                 alt="Benhur Santhosh"
-                className="w-80 h-80 rounded-2xl object-cover shadow-lg"
+                className="relative w-80 h-80 rounded-2xl object-cover shadow-2xl border border-purple-500/30"
               />
             </div>
           </div>
         </div>
 
         {/* Scroll Indicator */}
-        <div className="flex justify-center mt-12 animate-bounce">
-          <ChevronDown className="w-6 h-6 text-blue-600" />
+        <div className="flex justify-center mt-16 animate-bounce">
+          <ChevronDown className="w-6 h-6 text-purple-400" />
         </div>
       </div>
     </section>
