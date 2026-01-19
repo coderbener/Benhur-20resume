@@ -30,27 +30,27 @@ export default function InteractiveBackground() {
 
   return (
     <div className="fixed inset-0 pointer-events-none overflow-hidden">
-      {/* Main light blob - tracks mouse */}
+      {/* Main emerald blob - tracks mouse */}
       <div
-        className="absolute w-72 h-72 bg-white rounded-full mix-blend-screen filter blur-3xl opacity-10 animate-blob transition-transform duration-300"
+        className="absolute w-72 h-72 bg-emerald-500 rounded-full mix-blend-multiply filter blur-3xl opacity-15 animate-blob transition-transform duration-300"
         style={{
           top: `-10% + ${offsetY * 0.5}px`,
           left: `-5% + ${offsetX * 0.5}px`,
         }}
       ></div>
 
-      {/* Secondary light blob - inverse tracking */}
+      {/* Amber blob - inverse tracking */}
       <div
-        className="absolute w-72 h-72 bg-gray-300 rounded-full mix-blend-screen filter blur-3xl opacity-10 animate-blob animation-delay-2000 transition-transform duration-300"
+        className="absolute w-72 h-72 bg-amber-500 rounded-full mix-blend-multiply filter blur-3xl opacity-15 animate-blob animation-delay-2000 transition-transform duration-300"
         style={{
           top: `0% - ${offsetY * 0.3}px`,
           right: `-5% - ${offsetX * 0.5}px`,
         }}
       ></div>
 
-      {/* Tertiary light blob - gentle float */}
+      {/* Teal blob - gentle float */}
       <div
-        className="absolute w-72 h-72 bg-gray-400 rounded-full mix-blend-screen filter blur-3xl opacity-10 animate-blob animation-delay-4000 transition-transform duration-300"
+        className="absolute w-72 h-72 bg-teal-500 rounded-full mix-blend-multiply filter blur-3xl opacity-15 animate-blob animation-delay-4000 transition-transform duration-300"
         style={{
           bottom: `-8% + ${offsetY * 0.4}px`,
           left: `10% + ${offsetX * 0.3}px`,
@@ -60,10 +60,10 @@ export default function InteractiveBackground() {
       {/* Extra accent blob for more depth when moving */}
       {isMoving && (
         <div
-          className="absolute w-96 h-96 bg-white rounded-full mix-blend-screen filter blur-3xl opacity-5 transition-opacity duration-500"
+          className="absolute w-96 h-96 bg-emerald-400 rounded-full mix-blend-multiply filter blur-3xl opacity-10 transition-opacity duration-500"
           style={{
-            top: `${(mousePos.y / window.innerHeight) * 100}%`,
-            left: `${(mousePos.x / window.innerWidth) * 100}%`,
+            top: `${mousePos.y / window.innerHeight * 100}%`,
+            left: `${mousePos.x / window.innerWidth * 100}%`,
             transform: "translate(-50%, -50%)",
           }}
         ></div>
