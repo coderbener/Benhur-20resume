@@ -27,10 +27,10 @@ export default function Education() {
   ];
 
   return (
-    <section id="education" className="bg-black py-24 px-4 sm:px-6 lg:px-8">
+    <section id="education" className="bg-gradient-to-b from-blue-900 to-slate-900 py-24 px-4 sm:px-6 lg:px-8">
       <div className="max-w-5xl mx-auto">
         {/* Heading */}
-        <h2 className="text-4xl sm:text-5xl md:text-5xl font-bold tracking-tight mb-4 text-white">
+        <h2 className="text-4xl sm:text-5xl md:text-5xl font-bold tracking-tight mb-4 bg-gradient-to-r from-emerald-300 to-amber-300 bg-clip-text text-transparent">
           Education
         </h2>
         <p className="text-gray-400 font-sans text-base mb-16">
@@ -62,9 +62,7 @@ export default function Education() {
                   </p>
                 </div>
               </div>
-              <p className="text-gray-300 font-sans text-base">
-                {item.details}
-              </p>
+              <p className="text-gray-300 font-sans text-base">{item.details}</p>
             </div>
           ))}
         </div>
