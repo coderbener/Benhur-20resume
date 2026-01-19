@@ -15,33 +15,33 @@
    * A different format will require also updating the theme in tailwind.config.ts.
   */
   :root {
-    --background: 210 40% 8%;
-    --foreground: 210 10% 98%;
+    --background: 0 0% 0%;
+    --foreground: 0 0% 100%;
 
-    --card: 210 40% 12%;
-    --card-foreground: 210 10% 98%;
+    --card: 0 0% 8%;
+    --card-foreground: 0 0% 100%;
 
-    --popover: 210 40% 8%;
-    --popover-foreground: 210 10% 98%;
+    --popover: 0 0% 0%;
+    --popover-foreground: 0 0% 100%;
 
-    --primary: 280 100% 55%;
-    --primary-foreground: 210 40% 8%;
+    --primary: 0 0% 0%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 180 100% 50%;
-    --secondary-foreground: 210 40% 8%;
+    --secondary: 0 0% 20%;
+    --secondary-foreground: 0 0% 100%;
 
-    --muted: 210 10% 40%;
-    --muted-foreground: 210 10% 70%;
+    --muted: 0 0% 40%;
+    --muted-foreground: 0 0% 70%;
 
-    --accent: 280 100% 55%;
-    --accent-foreground: 210 40% 8%;
+    --accent: 0 0% 0%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 210 20% 25%;
-    --input: 210 20% 18%;
-    --ring: 280 100% 55%;
+    --border: 0 0% 20%;
+    --input: 0 0% 10%;
+    --ring: 0 0% 0%;
 
     --radius: 0.5rem;
 
@@ -63,41 +63,41 @@
   }
 
   .dark {
-    --background: 210 40% 8%;
-    --foreground: 210 10% 98%;
+    --background: 0 0% 0%;
+    --foreground: 0 0% 100%;
 
-    --card: 210 40% 12%;
-    --card-foreground: 210 10% 98%;
+    --card: 0 0% 8%;
+    --card-foreground: 0 0% 100%;
 
-    --popover: 210 40% 8%;
-    --popover-foreground: 210 10% 98%;
+    --popover: 0 0% 0%;
+    --popover-foreground: 0 0% 100%;
 
-    --primary: 280 100% 55%;
-    --primary-foreground: 210 40% 8%;
+    --primary: 0 0% 0%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 180 100% 50%;
-    --secondary-foreground: 210 40% 8%;
+    --secondary: 0 0% 20%;
+    --secondary-foreground: 0 0% 100%;
 
-    --muted: 210 10% 40%;
-    --muted-foreground: 210 10% 70%;
+    --muted: 0 0% 40%;
+    --muted-foreground: 0 0% 70%;
 
-    --accent: 280 100% 55%;
-    --accent-foreground: 210 40% 8%;
+    --accent: 0 0% 0%;
+    --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 210 20% 25%;
-    --input: 210 20% 18%;
-    --ring: 280 100% 55%;
-    --sidebar-background: 210 40% 8%;
-    --sidebar-foreground: 210 10% 98%;
-    --sidebar-primary: 280 100% 55%;
-    --sidebar-primary-foreground: 210 40% 8%;
-    --sidebar-accent: 280 100% 55%;
-    --sidebar-accent-foreground: 210 40% 8%;
-    --sidebar-border: 210 20% 25%;
-    --sidebar-ring: 280 100% 55%;
+    --border: 0 0% 20%;
+    --input: 0 0% 10%;
+    --ring: 0 0% 0%;
+    --sidebar-background: 0 0% 0%;
+    --sidebar-foreground: 0 0% 100%;
+    --sidebar-primary: 0 0% 0%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 0 0% 0%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 0 0% 20%;
+    --sidebar-ring: 0 0% 0%;
   }
 }
 
