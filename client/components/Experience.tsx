@@ -57,7 +57,7 @@ export default function Experience() {
                     <h3 className="text-2xl sm:text-2xl font-bold text-white">
                       {exp.position}
                     </h3>
-                    <p className="text-gray-300 font-sans font-semibold text-base mt-2">
+                    <p className="text-emerald-300 font-sans font-semibold text-base mt-2">
                       {exp.company}
                     </p>
                     <p className="text-gray-400 font-sans text-sm mt-1">
