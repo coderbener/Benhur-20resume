@@ -27,10 +27,10 @@ export default function Experience() {
   ];
 
   return (
-    <section id="experience" className="bg-gradient-to-b from-slate-950 to-slate-900 py-24 px-4 sm:px-6 lg:px-8">
+    <section id="experience" className="bg-black py-24 px-4 sm:px-6 lg:px-8">
       <div className="max-w-5xl mx-auto">
         {/* Heading */}
-        <h2 className="text-4xl sm:text-5xl md:text-5xl font-serif font-bold tracking-tight mb-4 bg-gradient-to-r from-purple-300 to-cyan-300 bg-clip-text text-transparent">
+        <h2 className="text-4xl sm:text-5xl md:text-5xl font-bold tracking-tight mb-4 text-white">
           Work Experience
         </h2>
         <p className="text-gray-400 font-sans text-base mb-16">
