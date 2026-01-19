@@ -112,7 +112,7 @@ export default function Contact() {
               <button
                 type="submit"
                 disabled={isLoading || submitted}
-                className="w-full bg-white text-black hover:shadow-lg hover:shadow-white/50 disabled:opacity-50 py-3 sm:py-4 rounded-lg transition-all duration-300 font-sans font-semibold text-base"
+                className="w-full bg-gradient-to-r from-emerald-500 to-emerald-600 text-white hover:shadow-lg hover:shadow-emerald-500/50 disabled:opacity-50 py-3 sm:py-4 rounded-lg transition-all duration-300 font-sans font-semibold text-base hover:scale-105"
               >
                 {submitted ? "Message Sent! 🎉" : isLoading ? "Sending..." : "Send Inquiry"}
               </button>
