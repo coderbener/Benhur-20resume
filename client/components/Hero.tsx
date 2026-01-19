@@ -15,11 +15,11 @@ export default function Hero() {
           {/* Left side - Text */}
           <div className="space-y-6">
             <div className="space-y-4">
-              <div className="inline-block px-4 py-2 bg-purple-500/20 border border-purple-500/50 rounded-full mb-4">
-                <p className="text-purple-300 text-sm font-semibold">Welcome to my portfolio</p>
+              <div className="inline-block px-4 py-2 bg-white/10 border border-white/30 rounded-full mb-4">
+                <p className="text-gray-300 text-sm font-semibold">Welcome to my portfolio</p>
               </div>
               <h1
-                className="text-5xl sm:text-6xl md:text-7xl font-bold tracking-tighter text-white leading-tight bg-clip-text text-transparent bg-gradient-to-r from-purple-200 via-purple-400 to-cyan-300"
+                className="text-5xl sm:text-6xl md:text-7xl font-bold tracking-tighter text-white leading-tight"
                 style={{ fontFamily: '"Space Grotesk", sans-serif', letterSpacing: '-0.02em' }}
               >
                 Benhur<br />
