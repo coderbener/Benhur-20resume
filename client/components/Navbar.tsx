@@ -41,31 +41,31 @@ export default function Navbar({
           <div className="hidden md:flex items-center gap-8">
             <button
               onClick={() => scrollToSection("projects")}
-              className="text-gray-300 hover:text-purple-300 transition-colors font-sans text-sm font-medium"
+              className="text-gray-400 hover:text-white transition-colors font-sans text-sm font-medium"
             >
               Projects
             </button>
             <button
               onClick={() => scrollToSection("skills")}
-              className="text-gray-300 hover:text-purple-300 transition-colors font-sans text-sm font-medium"
+              className="text-gray-400 hover:text-white transition-colors font-sans text-sm font-medium"
             >
               Skills
             </button>
             <button
               onClick={() => scrollToSection("experience")}
-              className="text-gray-300 hover:text-purple-300 transition-colors font-sans text-sm font-medium"
+              className="text-gray-400 hover:text-white transition-colors font-sans text-sm font-medium"
             >
               Experience
             </button>
             <button
               onClick={() => scrollToSection("education")}
-              className="text-gray-300 hover:text-purple-300 transition-colors font-sans text-sm font-medium"
+              className="text-gray-400 hover:text-white transition-colors font-sans text-sm font-medium"
             >
               Education
             </button>
             <button
               onClick={() => scrollToSection("contact")}
-              className="text-gray-300 hover:text-purple-300 transition-colors font-sans text-sm font-medium"
+              className="text-gray-400 hover:text-white transition-colors font-sans text-sm font-medium"
             >
               Contact
             </button>
@@ -75,7 +75,7 @@ export default function Navbar({
           <div className="hidden md:flex">
             <button
               onClick={() => scrollToSection("contact")}
-              className="px-6 py-2 bg-gradient-to-r from-purple-600 to-cyan-600 text-white hover:shadow-lg hover:shadow-purple-500/50 rounded-lg transition-all font-sans text-sm font-medium"
+              className="px-6 py-2 bg-white text-black hover:shadow-lg hover:shadow-white/50 rounded-lg transition-all font-sans text-sm font-medium"
             >
               Get In Touch
             </button>
