@@ -18,7 +18,7 @@ export default function SplashScreen({ onComplete }: SplashScreenProps) {
 
   return (
     <div
-      className={`fixed inset-0 bg-black z-50 flex items-center justify-center transition-opacity duration-500 ${
+      className={`fixed inset-0 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 z-50 flex items-center justify-center transition-opacity duration-500 ${
         isExiting ? "opacity-0" : "opacity-100"
       }`}
     >
@@ -67,18 +67,13 @@ export default function SplashScreen({ onComplete }: SplashScreenProps) {
               ? "scale-90 opacity-0 transition-all duration-1000"
               : "scale-100 text-reveal"
           }`}
-          style={{
-            fontFamily: '"Space Grotesk", sans-serif',
-            letterSpacing: "-0.02em",
-          }}
+          style={{ fontFamily: '"Space Grotesk", sans-serif', letterSpacing: '-0.02em' }}
         >
           Benhur
         </h1>
         <div
           className={`mt-8 h-1 bg-white ${
-            isExiting
-              ? "w-0 opacity-0 transition-all duration-1000"
-              : "underline-reveal animate-pulse"
+            isExiting ? "w-0 opacity-0 transition-all duration-1000" : "underline-reveal animate-pulse"
           }`}
         ></div>
       </div>
