@@ -48,10 +48,10 @@ export default function Experience() {
               className="relative pl-20"
             >
               {/* Timeline dot */}
-              <div className="absolute -left-4 top-2 w-6 h-6 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-full border-4 border-slate-900"></div>
+              <div className="absolute -left-4 top-2 w-6 h-6 bg-white rounded-full border-4 border-black"></div>
 
               {/* Content */}
-              <div className="bg-slate-800/50 backdrop-blur-sm border border-purple-500/30 rounded-lg p-8 hover:border-purple-500/60 hover:shadow-xl hover:shadow-purple-500/10 transition-all duration-300">
+              <div className="bg-gray-900/50 backdrop-blur-sm border border-white/20 rounded-lg p-8 hover:border-white/40 hover:shadow-xl hover:shadow-white/10 transition-all duration-300">
                 <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4 mb-4">
                   <div className="flex-grow">
                     <h3 className="text-2xl sm:text-2xl font-serif font-bold text-white">
