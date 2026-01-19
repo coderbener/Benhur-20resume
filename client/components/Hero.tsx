@@ -9,7 +9,7 @@ export default function Hero() {
   };
 
   return (
-    <section className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20 pb-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+    <section className="min-h-screen flex flex-col items-center justify-center bg-black pt-20 pb-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
       <div className="max-w-5xl mx-auto w-full space-y-8 animate-fade-in relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           {/* Left side - Text */}
