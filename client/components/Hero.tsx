@@ -36,7 +36,7 @@ export default function Hero() {
             <div className="flex gap-4 pt-4">
               <button
                 onClick={scrollToProjects}
-                className="group relative px-8 py-4 bg-white text-black font-semibold rounded-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:shadow-white/50"
+                className="group relative px-8 py-4 bg-gradient-to-r from-emerald-500 to-emerald-600 text-white font-semibold rounded-lg overflow-hidden transition-all duration-300 hover:shadow-2xl hover:shadow-emerald-500/50 hover:scale-105"
               >
                 <span className="relative z-10">View My Work</span>
               </button>
