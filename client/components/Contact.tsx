@@ -124,14 +124,14 @@ export default function Contact() {
             {/* Email */}
             <div>
               <div className="flex items-start gap-4 group">
-                <div className="w-12 h-12 bg-gradient-to-br from-purple-600/20 to-cyan-600/20 rounded-lg flex items-center justify-center flex-shrink-0 border border-purple-500/30 group-hover:border-purple-500/60 transition-all">
-                  <Mail className="w-6 h-6 text-purple-400" />
+                <div className="w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center flex-shrink-0 border border-white/20 group-hover:border-white/40 transition-all">
+                  <Mail className="w-6 h-6 text-gray-300" />
                 </div>
                 <div>
                   <p className="text-gray-400 font-sans text-sm mb-1 font-semibold">Email</p>
                   <a
                     href="mailto:benhuratwork@gmail.com"
-                    className="text-white font-sans font-semibold text-lg hover:text-purple-300 transition-colors"
+                    className="text-white font-sans font-semibold text-lg hover:text-gray-300 transition-colors"
                   >
                     benhuratwork@gmail.com
                   </a>
@@ -142,14 +142,14 @@ export default function Contact() {
             {/* Phone */}
             <div>
               <div className="flex items-start gap-4 group">
-                <div className="w-12 h-12 bg-gradient-to-br from-purple-600/20 to-cyan-600/20 rounded-lg flex items-center justify-center flex-shrink-0 border border-purple-500/30 group-hover:border-purple-500/60 transition-all">
-                  <Phone className="w-6 h-6 text-cyan-400" />
+                <div className="w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center flex-shrink-0 border border-white/20 group-hover:border-white/40 transition-all">
+                  <Phone className="w-6 h-6 text-gray-300" />
                 </div>
                 <div>
                   <p className="text-gray-400 font-sans text-sm mb-1 font-semibold">Phone</p>
                   <a
                     href="tel:+919567651195"
-                    className="text-white font-sans font-semibold text-lg hover:text-cyan-300 transition-colors"
+                    className="text-white font-sans font-semibold text-lg hover:text-gray-300 transition-colors"
                   >
                     +91 95676 51195
                   </a>
