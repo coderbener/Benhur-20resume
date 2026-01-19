@@ -40,7 +40,8 @@ export default function Projects() {
           Featured Projects
         </h2>
         <p className="text-gray-400 font-sans text-base mb-16 max-w-2xl">
-          Innovative solutions demonstrating expertise in computer vision, web development, and cybersecurity.
+          Innovative solutions demonstrating expertise in computer vision, web
+          development, and cybersecurity.
         </p>
 
         {/* Projects Grid */}
@@ -84,7 +85,9 @@ export default function Projects() {
                       key={index}
                       className="text-gray-300 font-sans text-sm flex items-start gap-3"
                     >
-                      <span className="text-gray-400 mt-1 flex-shrink-0 font-bold">✓</span>
+                      <span className="text-gray-400 mt-1 flex-shrink-0 font-bold">
+                        ✓
+                      </span>
                       <span>{highlight}</span>
                     </li>
                   ))}

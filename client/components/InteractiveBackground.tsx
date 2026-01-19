@@ -62,8 +62,8 @@ export default function InteractiveBackground() {
         <div
           className="absolute w-96 h-96 bg-white rounded-full mix-blend-screen filter blur-3xl opacity-5 transition-opacity duration-500"
           style={{
-            top: `${mousePos.y / window.innerHeight * 100}%`,
-            left: `${mousePos.x / window.innerWidth * 100}%`,
+            top: `${(mousePos.y / window.innerHeight) * 100}%`,
+            left: `${(mousePos.x / window.innerWidth) * 100}%`,
             transform: "translate(-50%, -50%)",
           }}
         ></div>

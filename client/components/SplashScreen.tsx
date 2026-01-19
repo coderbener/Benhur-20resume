@@ -67,13 +67,18 @@ export default function SplashScreen({ onComplete }: SplashScreenProps) {
               ? "scale-90 opacity-0 transition-all duration-1000"
               : "scale-100 text-reveal"
           }`}
-          style={{ fontFamily: '"Space Grotesk", sans-serif', letterSpacing: '-0.02em' }}
+          style={{
+            fontFamily: '"Space Grotesk", sans-serif',
+            letterSpacing: "-0.02em",
+          }}
         >
           Benhur
         </h1>
         <div
           className={`mt-8 h-1 bg-white ${
-            isExiting ? "w-0 opacity-0 transition-all duration-1000" : "underline-reveal animate-pulse"
+            isExiting
+              ? "w-0 opacity-0 transition-all duration-1000"
+              : "underline-reveal animate-pulse"
           }`}
         ></div>
       </div>

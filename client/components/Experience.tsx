@@ -43,10 +43,7 @@ export default function Experience() {
           <div className="absolute left-6 top-0 bottom-0 w-1 bg-white"></div>
 
           {experiences.map((exp, index) => (
-            <div
-              key={exp.id}
-              className="relative pl-20"
-            >
+            <div key={exp.id} className="relative pl-20">
               {/* Timeline dot */}
               <div className="absolute -left-4 top-2 w-6 h-6 bg-white rounded-full border-4 border-black"></div>
 
@@ -78,7 +75,9 @@ export default function Experience() {
                       key={index}
                       className="text-gray-300 font-sans text-sm flex gap-3 items-start"
                     >
-                      <span className="text-gray-400 mt-1.5 flex-shrink-0 font-bold">→</span>
+                      <span className="text-gray-400 mt-1.5 flex-shrink-0 font-bold">
+                        →
+                      </span>
                       <span>{achievement}</span>
                     </li>
                   ))}

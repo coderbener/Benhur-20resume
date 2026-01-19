@@ -62,7 +62,9 @@ export default function Education() {
                   </p>
                 </div>
               </div>
-              <p className="text-gray-300 font-sans text-base">{item.details}</p>
+              <p className="text-gray-300 font-sans text-base">
+                {item.details}
+              </p>
             </div>
           ))}
         </div>

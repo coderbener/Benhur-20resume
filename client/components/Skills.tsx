@@ -47,8 +47,12 @@ export default function Skills() {
                     key={skillIndex}
                     className="text-gray-300 font-sans text-base flex items-center gap-3 group/item"
                   >
-                    <span className="text-gray-400 text-lg font-bold group-hover/item:text-white transition-colors">✓</span>
-                    <span className="group-hover/item:text-white transition-colors">{skill}</span>
+                    <span className="text-gray-400 text-lg font-bold group-hover/item:text-white transition-colors">
+                      ✓
+                    </span>
+                    <span className="group-hover/item:text-white transition-colors">
+                      {skill}
+                    </span>
                   </li>
                 ))}
               </ul>

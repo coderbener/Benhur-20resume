@@ -16,20 +16,38 @@ export default function Hero() {
           <div className="space-y-6">
             <div className="space-y-4">
               <div className="inline-block px-4 py-2 bg-white/10 border border-white/30 rounded-full mb-4">
-                <p className="text-gray-300 text-sm font-semibold">Welcome to my portfolio</p>
+                <p className="text-gray-300 text-sm font-semibold">
+                  Welcome to my portfolio
+                </p>
               </div>
               <h1
                 className="text-5xl sm:text-6xl md:text-7xl font-bold tracking-tighter text-white leading-tight"
-                style={{ fontFamily: '"Space Grotesk", sans-serif', letterSpacing: '-0.02em' }}
+                style={{
+                  fontFamily: '"Space Grotesk", sans-serif',
+                  letterSpacing: "-0.02em",
+                }}
               >
-                Benhur<br />
+                Benhur
+                <br />
                 Santhosh
               </h1>
             </div>
 
             {/* Sub-headline */}
             <p className="text-base sm:text-lg text-gray-300 leading-relaxed max-w-lg">
-              Final year CS student specializing in <span className="text-purple-300 font-semibold">Cybersecurity</span>, <span className="text-cyan-300 font-semibold">Penetration Testing</span>, and <span className="text-purple-300 font-semibold">Ethical Hacking</span>.
+              Final year CS student specializing in{" "}
+              <span className="text-purple-300 font-semibold">
+                Cybersecurity
+              </span>
+              ,{" "}
+              <span className="text-cyan-300 font-semibold">
+                Penetration Testing
+              </span>
+              , and{" "}
+              <span className="text-purple-300 font-semibold">
+                Ethical Hacking
+              </span>
+              .
             </p>
 
             {/* CTA Buttons */}

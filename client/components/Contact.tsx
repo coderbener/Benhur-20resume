@@ -11,7 +11,7 @@ export default function Contact() {
   const [isLoading, setIsLoading] = useState(false);
 
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
     const { name, value } = e.target;
     setFormData((prev) => ({
@@ -52,7 +52,8 @@ export default function Contact() {
           Let's Connect
         </h2>
         <p className="text-gray-400 font-sans text-base mb-16 max-w-2xl">
-          Interested in collaborating, learning opportunities, or just want to chat about cybersecurity? Reach out!
+          Interested in collaborating, learning opportunities, or just want to
+          chat about cybersecurity? Reach out!
         </p>
 
         {/* Two Column Layout */}
@@ -114,7 +115,11 @@ export default function Contact() {
                 disabled={isLoading || submitted}
                 className="w-full bg-white text-black hover:shadow-lg hover:shadow-white/50 disabled:opacity-50 py-3 sm:py-4 rounded-lg transition-all duration-300 font-sans font-semibold text-base"
               >
-                {submitted ? "Message Sent! 🎉" : isLoading ? "Sending..." : "Send Inquiry"}
+                {submitted
+                  ? "Message Sent! 🎉"
+                  : isLoading
+                    ? "Sending..."
+                    : "Send Inquiry"}
               </button>
             </form>
           </div>
@@ -128,7 +133,9 @@ export default function Contact() {
                   <Mail className="w-6 h-6 text-gray-300" />
                 </div>
                 <div>
-                  <p className="text-gray-400 font-sans text-sm mb-1 font-semibold">Email</p>
+                  <p className="text-gray-400 font-sans text-sm mb-1 font-semibold">
+                    Email
+                  </p>
                   <a
                     href="mailto:benhuratwork@gmail.com"
                     className="text-white font-sans font-semibold text-lg hover:text-gray-300 transition-colors"
@@ -146,7 +153,9 @@ export default function Contact() {
                   <Phone className="w-6 h-6 text-gray-300" />
                 </div>
                 <div>
-                  <p className="text-gray-400 font-sans text-sm mb-1 font-semibold">Phone</p>
+                  <p className="text-gray-400 font-sans text-sm mb-1 font-semibold">
+                    Phone
+                  </p>
                   <a
                     href="tel:+919567651195"
                     className="text-white font-sans font-semibold text-lg hover:text-gray-300 transition-colors"
@@ -159,7 +168,9 @@ export default function Contact() {
 
             {/* Social Links */}
             <div>
-              <p className="text-gray-300 font-sans text-sm mb-6 font-semibold">Connect With Me</p>
+              <p className="text-gray-300 font-sans text-sm mb-6 font-semibold">
+                Connect With Me
+              </p>
               <div className="flex gap-4">
                 <a
                   href="https://www.linkedin.com/in/benhursanthosh"

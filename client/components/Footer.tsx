@@ -13,7 +13,8 @@ export default function Footer() {
               Benhur Santhosh
             </h3>
             <p className="text-gray-400 font-sans text-sm leading-relaxed">
-              Cybersecurity enthusiast exploring the world of penetration testing and ethical hacking.
+              Cybersecurity enthusiast exploring the world of penetration
+              testing and ethical hacking.
             </p>
           </div>
 

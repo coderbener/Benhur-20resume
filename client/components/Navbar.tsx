@@ -31,7 +31,10 @@ export default function Navbar({
             <a
               href="/"
               className="text-2xl font-bold tracking-tighter text-white"
-              style={{ fontFamily: '"Space Grotesk", sans-serif', letterSpacing: '-0.02em' }}
+              style={{
+                fontFamily: '"Space Grotesk", sans-serif',
+                letterSpacing: "-0.02em",
+              }}
             >
               Benhur
             </a>

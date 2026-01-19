@@ -4,18 +4,23 @@ export default function Certifications() {
       id: "cisco",
       title: "Introduction to Cybersecurity",
       issuer: "Cisco",
-      description: "Foundational certification in cybersecurity principles and practices.",
+      description:
+        "Foundational certification in cybersecurity principles and practices.",
     },
     {
       id: "ielts",
       title: "IELTS Academic",
       issuer: "IELTS",
-      description: "Band Score: 7.5 - Demonstrates advanced English language proficiency.",
+      description:
+        "Band Score: 7.5 - Demonstrates advanced English language proficiency.",
     },
   ];
 
   return (
-    <section id="certifications" className="bg-black py-24 px-4 sm:px-6 lg:px-8">
+    <section
+      id="certifications"
+      className="bg-black py-24 px-4 sm:px-6 lg:px-8"
+    >
       <div className="max-w-5xl mx-auto">
         {/* Heading */}
         <h2 className="text-4xl sm:text-5xl md:text-5xl font-bold tracking-tight mb-4 text-white">
