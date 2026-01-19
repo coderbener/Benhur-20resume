@@ -54,10 +54,10 @@ export default function Experience() {
               <div className="bg-gray-900/50 backdrop-blur-sm border border-white/20 rounded-lg p-8 hover:border-white/40 hover:shadow-xl hover:shadow-white/10 transition-all duration-300">
                 <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4 mb-4">
                   <div className="flex-grow">
-                    <h3 className="text-2xl sm:text-2xl font-serif font-bold text-white">
+                    <h3 className="text-2xl sm:text-2xl font-bold text-white">
                       {exp.position}
                     </h3>
-                    <p className="text-purple-400 font-sans font-semibold text-base mt-2">
+                    <p className="text-gray-300 font-sans font-semibold text-base mt-2">
                       {exp.company}
                     </p>
                     <p className="text-gray-400 font-sans text-sm mt-1">
@@ -65,7 +65,7 @@ export default function Experience() {
                     </p>
                   </div>
                   <div className="text-right">
-                    <p className="text-cyan-400 font-sans font-semibold text-base whitespace-nowrap">
+                    <p className="text-gray-300 font-sans font-semibold text-base whitespace-nowrap">
                       {exp.period}
                     </p>
                   </div>
