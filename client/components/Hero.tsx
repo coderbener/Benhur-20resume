@@ -46,11 +46,11 @@ export default function Hero() {
           {/* Right side - Photo */}
           <div className="flex justify-center">
             <div className="relative group">
-              <div className="absolute -inset-1 bg-white rounded-full blur-2xl opacity-50 group-hover:opacity-75 transition duration-1000 group-hover:duration-200 animate-pulse"></div>
+              <div className="absolute -inset-1 bg-gradient-to-r from-emerald-500 via-amber-500 to-emerald-500 rounded-full blur-3xl opacity-60 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-pulse"></div>
               <img
                 src="https://cdn.builder.io/api/v1/image/assets%2Fbc603bacd4e645ed8ab163ef56e09eb6%2Fba3925f1441e4da8ae9b87b808cd5493?format=webp&width=800"
                 alt="Benhur Santhosh"
-                className="relative w-80 h-80 rounded-full object-cover shadow-2xl border border-white/30"
+                className="relative w-80 h-80 rounded-full object-cover shadow-2xl border-2 border-emerald-400/50"
               />
             </div>
           </div>
