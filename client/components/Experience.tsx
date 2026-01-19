@@ -27,10 +27,10 @@ export default function Experience() {
   ];
 
   return (
-    <section id="experience" className="bg-black py-24 px-4 sm:px-6 lg:px-8">
+    <section id="experience" className="bg-gradient-to-b from-slate-900 to-blue-900 py-24 px-4 sm:px-6 lg:px-8">
       <div className="max-w-5xl mx-auto">
         {/* Heading */}
-        <h2 className="text-4xl sm:text-5xl md:text-5xl font-bold tracking-tight mb-4 text-white">
+        <h2 className="text-4xl sm:text-5xl md:text-5xl font-bold tracking-tight mb-4 bg-gradient-to-r from-emerald-300 to-amber-300 bg-clip-text text-transparent">
           Work Experience
         </h2>
         <p className="text-gray-400 font-sans text-base mb-16">
@@ -43,7 +43,10 @@ export default function Experience() {
           <div className="absolute left-6 top-0 bottom-0 w-1 bg-white"></div>
 
           {experiences.map((exp, index) => (
-            <div key={exp.id} className="relative pl-20">
+            <div
+              key={exp.id}
+              className="relative pl-20"
+            >
               {/* Timeline dot */}
               <div className="absolute -left-4 top-2 w-6 h-6 bg-white rounded-full border-4 border-black"></div>
 
@@ -75,9 +78,7 @@ export default function Experience() {
                       key={index}
                       className="text-gray-300 font-sans text-sm flex gap-3 items-start"
                     >
-                      <span className="text-gray-400 mt-1.5 flex-shrink-0 font-bold">
-                        →
-                      </span>
+                      <span className="text-gray-400 mt-1.5 flex-shrink-0 font-bold">→</span>
                       <span>{achievement}</span>
                     </li>
                   ))}
