@@ -30,13 +30,13 @@ export default function Skills() {
           {skillCategories.map((skillGroup, index) => (
             <div
               key={index}
-              className="group relative p-8 sm:p-10 rounded-xl border border-white/20 bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm hover:border-white/40 transition-all duration-300 hover:shadow-xl hover:shadow-white/10"
+              className="group relative p-8 sm:p-10 rounded-2xl border border-emerald-500/30 bg-gradient-to-br from-slate-800/50 to-blue-900/50 backdrop-blur-md hover:border-emerald-500/60 transition-all duration-300 hover:shadow-xl hover:shadow-emerald-500/20"
             >
               {/* Gradient overlay on hover */}
-              <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-white/5 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div className="absolute inset-0 bg-gradient-to-br from-emerald-600/5 to-amber-600/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
 
               {/* Category Title */}
-              <h3 className="text-2xl sm:text-3xl font-bold text-white mb-8 relative z-10">
+              <h3 className="text-2xl sm:text-3xl font-bold text-white mb-8 relative z-10 group-hover:text-emerald-200 transition-colors">
                 {skillGroup.category}
               </h3>
 
@@ -47,8 +47,8 @@ export default function Skills() {
                     key={skillIndex}
                     className="text-gray-300 font-sans text-base flex items-center gap-3 group/item"
                   >
-                    <span className="text-gray-400 text-lg font-bold group-hover/item:text-white transition-colors">✓</span>
-                    <span className="group-hover/item:text-white transition-colors">{skill}</span>
+                    <span className="text-emerald-400 text-lg font-bold group-hover/item:text-amber-400 transition-colors">✓</span>
+                    <span className="group-hover/item:text-emerald-200 transition-colors">{skill}</span>
                   </li>
                 ))}
               </ul>
