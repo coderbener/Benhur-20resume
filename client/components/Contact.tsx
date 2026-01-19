@@ -165,7 +165,7 @@ export default function Contact() {
                   href="https://www.linkedin.com/in/benhursanthosh"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-12 h-12 bg-white/10 border border-white/20 hover:border-white/40 rounded-lg flex items-center justify-center text-gray-300 hover:text-white transition-all"
+                  className="w-12 h-12 bg-emerald-500/10 border border-emerald-500/30 hover:border-emerald-500/60 rounded-lg flex items-center justify-center text-emerald-400 hover:text-emerald-300 transition-all"
                   title="LinkedIn"
                 >
                   <Linkedin className="w-5 h-5" />
@@ -174,7 +174,7 @@ export default function Contact() {
                   href="https://github.com/coderbener"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-12 h-12 bg-white/10 border border-white/20 hover:border-white/40 rounded-lg flex items-center justify-center text-gray-300 hover:text-white transition-all"
+                  className="w-12 h-12 bg-amber-500/10 border border-amber-500/30 hover:border-amber-500/60 rounded-lg flex items-center justify-center text-amber-400 hover:text-amber-300 transition-all"
                   title="GitHub"
                 >
                   <Github className="w-5 h-5" />
@@ -185,7 +185,7 @@ export default function Contact() {
                   href="https://tryhackme.com/p/benhuratwork"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-block px-5 py-2 bg-white text-black hover:shadow-lg hover:shadow-white/50 rounded-lg transition-all font-sans text-sm font-medium"
+                  className="inline-block px-5 py-2 bg-gradient-to-r from-emerald-500 to-emerald-600 text-white hover:shadow-lg hover:shadow-emerald-500/50 rounded-lg transition-all font-sans text-sm font-medium hover:scale-105"
                 >
                   TryHackMe Profile
                 </a>
