@@ -65,7 +65,7 @@ export default function Experience() {
                     </p>
                   </div>
                   <div className="text-right">
-                    <p className="text-gray-300 font-sans font-semibold text-base whitespace-nowrap">
+                    <p className="text-amber-300 font-sans font-semibold text-base whitespace-nowrap">
                       {exp.period}
                     </p>
                   </div>
