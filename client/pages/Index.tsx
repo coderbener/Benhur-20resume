@@ -10,7 +10,7 @@ import Footer from "@/components/Footer";
 
 export default function Index() {
   return (
-    <div className="bg-gray-950">
+    <div className="bg-black">
       <Navbar />
       <Hero />
       <Projects />
