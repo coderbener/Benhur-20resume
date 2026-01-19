@@ -45,10 +45,10 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="bg-gradient-to-b from-slate-900 via-slate-950 to-slate-950 py-24 px-4 sm:px-6 lg:px-8">
+    <section id="contact" className="bg-black py-24 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         {/* Heading */}
-        <h2 className="text-4xl sm:text-5xl md:text-5xl font-serif font-bold tracking-tight mb-4 bg-gradient-to-r from-purple-300 to-cyan-300 bg-clip-text text-transparent">
+        <h2 className="text-4xl sm:text-5xl md:text-5xl font-bold tracking-tight mb-4 text-white">
           Let's Connect
         </h2>
         <p className="text-gray-400 font-sans text-base mb-16 max-w-2xl">
