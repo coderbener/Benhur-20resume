@@ -30,7 +30,7 @@ export default function Navbar({
           <div className="flex-shrink-0">
             <a
               href="/"
-              className="text-2xl font-bold tracking-tighter text-white"
+              className="text-2xl font-bold tracking-tighter bg-gradient-to-r from-emerald-400 to-amber-400 bg-clip-text text-transparent"
               style={{ fontFamily: '"Space Grotesk", sans-serif', letterSpacing: '-0.02em' }}
             >
               Benhur
