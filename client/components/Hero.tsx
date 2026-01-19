@@ -58,7 +58,7 @@ export default function Hero() {
 
         {/* Scroll Indicator */}
         <div className="flex justify-center mt-16 animate-bounce">
-          <ChevronDown className="w-6 h-6 text-white" />
+          <ChevronDown className="w-6 h-6 text-emerald-400" />
         </div>
       </div>
     </section>
