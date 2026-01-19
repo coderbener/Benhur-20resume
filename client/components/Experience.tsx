@@ -78,7 +78,7 @@ export default function Experience() {
                       key={index}
                       className="text-gray-300 font-sans text-sm flex gap-3 items-start"
                     >
-                      <span className="text-cyan-400 mt-1.5 flex-shrink-0 font-bold">→</span>
+                      <span className="text-gray-400 mt-1.5 flex-shrink-0 font-bold">→</span>
                       <span>{achievement}</span>
                     </li>
                   ))}
