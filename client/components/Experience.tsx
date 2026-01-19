@@ -40,7 +40,7 @@ export default function Experience() {
         {/* Experience Timeline */}
         <div className="space-y-8 relative">
           {/* Timeline line */}
-          <div className="absolute left-6 top-0 bottom-0 w-1 bg-white"></div>
+          <div className="absolute left-6 top-0 bottom-0 w-1 bg-gradient-to-b from-emerald-500 to-amber-500"></div>
 
           {experiences.map((exp, index) => (
             <div
