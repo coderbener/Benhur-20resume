@@ -36,10 +36,9 @@ export default function Hero() {
             <div className="flex gap-4 pt-4">
               <button
                 onClick={scrollToProjects}
-                className="group relative px-8 py-4 bg-gradient-to-r from-purple-600 to-purple-700 text-white font-semibold rounded-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:shadow-purple-500/50"
+                className="group relative px-8 py-4 bg-white text-black font-semibold rounded-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:shadow-white/50"
               >
                 <span className="relative z-10">View My Work</span>
-                <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-purple-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </button>
             </div>
           </div>
