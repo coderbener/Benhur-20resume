@@ -103,7 +103,7 @@ export default function Contact() {
                   onChange={handleChange}
                   required
                   rows={6}
-                  className="w-full bg-gray-800/50 border border-white/20 text-white placeholder-gray-400 font-sans text-base px-4 py-3 rounded-lg focus:outline-none focus:border-white focus:ring-2 focus:ring-white/20 transition-all duration-300 resize-none"
+                  className="w-full bg-slate-800/50 border border-emerald-500/30 text-white placeholder-gray-400 font-sans text-base px-4 py-3 rounded-lg focus:outline-none focus:border-emerald-500 focus:ring-2 focus:ring-emerald-500/20 transition-all duration-300 resize-none"
                   placeholder="Tell me about your inquiry..."
                 />
               </div>
