@@ -98,41 +98,41 @@ export default function Navbar({
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="md:hidden bg-slate-900/80 border-t border-purple-500/20 backdrop-blur-xl">
+          <div className="md:hidden bg-black/80 border-t border-white/20 backdrop-blur-xl">
             <div className="px-2 pt-2 pb-3 space-y-1">
               <button
                 onClick={() => scrollToSection("projects")}
-                className="block w-full text-left px-3 py-2 text-gray-300 hover:text-purple-300 hover:bg-purple-500/10 rounded transition-colors font-sans text-sm"
+                className="block w-full text-left px-3 py-2 text-gray-400 hover:text-white hover:bg-white/10 rounded transition-colors font-sans text-sm"
               >
                 Projects
               </button>
               <button
                 onClick={() => scrollToSection("skills")}
-                className="block w-full text-left px-3 py-2 text-gray-300 hover:text-purple-300 hover:bg-purple-500/10 rounded transition-colors font-sans text-sm"
+                className="block w-full text-left px-3 py-2 text-gray-400 hover:text-white hover:bg-white/10 rounded transition-colors font-sans text-sm"
               >
                 Skills
               </button>
               <button
                 onClick={() => scrollToSection("experience")}
-                className="block w-full text-left px-3 py-2 text-gray-300 hover:text-purple-300 hover:bg-purple-500/10 rounded transition-colors font-sans text-sm"
+                className="block w-full text-left px-3 py-2 text-gray-400 hover:text-white hover:bg-white/10 rounded transition-colors font-sans text-sm"
               >
                 Experience
               </button>
               <button
                 onClick={() => scrollToSection("education")}
-                className="block w-full text-left px-3 py-2 text-gray-300 hover:text-purple-300 hover:bg-purple-500/10 rounded transition-colors font-sans text-sm"
+                className="block w-full text-left px-3 py-2 text-gray-400 hover:text-white hover:bg-white/10 rounded transition-colors font-sans text-sm"
               >
                 Education
               </button>
               <button
                 onClick={() => scrollToSection("contact")}
-                className="block w-full text-left px-3 py-2 text-gray-300 hover:text-purple-300 hover:bg-purple-500/10 rounded transition-colors font-sans text-sm"
+                className="block w-full text-left px-3 py-2 text-gray-400 hover:text-white hover:bg-white/10 rounded transition-colors font-sans text-sm"
               >
                 Contact
               </button>
               <button
                 onClick={() => scrollToSection("contact")}
-                className="block w-full text-left px-3 py-2 bg-gradient-to-r from-purple-600 to-cyan-600 text-white hover:shadow-lg hover:shadow-purple-500/50 rounded mt-4 transition-all font-sans text-sm font-medium"
+                className="block w-full text-left px-3 py-2 bg-white text-black hover:shadow-lg hover:shadow-white/50 rounded mt-4 transition-all font-sans text-sm font-medium"
               >
                 Get In Touch
               </button>
