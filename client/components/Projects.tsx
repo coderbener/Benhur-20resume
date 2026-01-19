@@ -33,15 +33,14 @@ export default function Projects() {
   ];
 
   return (
-    <section id="projects" className="bg-black py-24 px-4 sm:px-6 lg:px-8">
+    <section id="projects" className="bg-gradient-to-b from-slate-900 to-blue-900 py-24 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         {/* Heading */}
-        <h2 className="text-4xl sm:text-5xl md:text-5xl font-bold tracking-tight mb-4 text-white">
+        <h2 className="text-4xl sm:text-5xl md:text-5xl font-bold tracking-tight mb-4 bg-gradient-to-r from-emerald-300 to-amber-300 bg-clip-text text-transparent">
           Featured Projects
         </h2>
         <p className="text-gray-400 font-sans text-base mb-16 max-w-2xl">
-          Innovative solutions demonstrating expertise in computer vision, web
-          development, and cybersecurity.
+          Innovative solutions demonstrating expertise in computer vision, web development, and cybersecurity.
         </p>
 
         {/* Projects Grid */}
@@ -85,9 +84,7 @@ export default function Projects() {
                       key={index}
                       className="text-gray-300 font-sans text-sm flex items-start gap-3"
                     >
-                      <span className="text-gray-400 mt-1 flex-shrink-0 font-bold">
-                        ✓
-                      </span>
+                      <span className="text-gray-400 mt-1 flex-shrink-0 font-bold">✓</span>
                       <span>{highlight}</span>
                     </li>
                   ))}
