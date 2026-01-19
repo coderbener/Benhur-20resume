@@ -62,7 +62,7 @@ export default function SplashScreen({ onComplete }: SplashScreenProps) {
       </style>
       <div className="flex flex-col items-center justify-center">
         <h1
-          className={`text-7xl sm:text-8xl font-bold tracking-tighter bg-gradient-to-r from-emerald-300 via-emerald-200 to-amber-300 bg-clip-text text-transparent ${
+          className={`text-7xl sm:text-8xl font-bold tracking-tighter text-amber-300 ${
             isExiting
               ? "scale-90 opacity-0 transition-all duration-1000"
               : "scale-100 text-reveal"
@@ -72,7 +72,7 @@ export default function SplashScreen({ onComplete }: SplashScreenProps) {
           Benhur
         </h1>
         <div
-          className={`mt-8 h-1 bg-gradient-to-r from-emerald-400/0 via-amber-400 to-emerald-400/0 ${
+          className={`mt-8 h-1 bg-amber-400 ${
             isExiting ? "w-0 opacity-0 transition-all duration-1000" : "underline-reveal animate-pulse"
           }`}
         ></div>
