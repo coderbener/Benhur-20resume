@@ -4,12 +4,12 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-gradient-to-b from-slate-950 to-black border-t border-purple-500/20 py-16 px-4 sm:px-6 lg:px-8">
+    <footer className="bg-black border-t border-white/20 py-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12 pb-12 border-b border-purple-500/20">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12 pb-12 border-b border-white/20">
           {/* Brand */}
           <div>
-            <h3 className="text-2xl font-serif font-bold bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent mb-4">
+            <h3 className="text-2xl font-bold text-white mb-4">
               Benhur Santhosh
             </h3>
             <p className="text-gray-400 font-sans text-sm leading-relaxed">
@@ -26,7 +26,7 @@ export default function Footer() {
               <li>
                 <a
                   href="#projects"
-                  className="text-gray-400 hover:text-purple-400 font-sans text-sm transition-colors"
+                  className="text-gray-400 hover:text-white font-sans text-sm transition-colors"
                 >
                   Projects
                 </a>
@@ -34,7 +34,7 @@ export default function Footer() {
               <li>
                 <a
                   href="#skills"
-                  className="text-gray-400 hover:text-purple-400 font-sans text-sm transition-colors"
+                  className="text-gray-400 hover:text-white font-sans text-sm transition-colors"
                 >
                   Skills
                 </a>
@@ -42,7 +42,7 @@ export default function Footer() {
               <li>
                 <a
                   href="#contact"
-                  className="text-gray-400 hover:text-purple-400 font-sans text-sm transition-colors"
+                  className="text-gray-400 hover:text-white font-sans text-sm transition-colors"
                 >
                   Contact
                 </a>
@@ -60,7 +60,7 @@ export default function Footer() {
                 href="https://www.linkedin.com/in/benhursanthosh"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 bg-gradient-to-br from-purple-600/20 to-cyan-600/20 border border-purple-500/30 hover:border-purple-500/60 rounded-lg flex items-center justify-center text-purple-400 hover:text-purple-300 transition-all"
+                className="w-10 h-10 bg-white/10 border border-white/20 hover:border-white/40 rounded-lg flex items-center justify-center text-gray-300 hover:text-white transition-all"
                 title="LinkedIn"
               >
                 <Linkedin className="w-5 h-5" />
@@ -69,14 +69,14 @@ export default function Footer() {
                 href="https://github.com/coderbener"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 bg-gradient-to-br from-purple-600/20 to-cyan-600/20 border border-purple-500/30 hover:border-purple-500/60 rounded-lg flex items-center justify-center text-cyan-400 hover:text-cyan-300 transition-all"
+                className="w-10 h-10 bg-white/10 border border-white/20 hover:border-white/40 rounded-lg flex items-center justify-center text-gray-300 hover:text-white transition-all"
                 title="GitHub"
               >
                 <Github className="w-5 h-5" />
               </a>
               <a
                 href="mailto:benhuratwork@gmail.com"
-                className="w-10 h-10 bg-gradient-to-br from-purple-600/20 to-cyan-600/20 border border-purple-500/30 hover:border-purple-500/60 rounded-lg flex items-center justify-center text-purple-400 hover:text-purple-300 transition-all"
+                className="w-10 h-10 bg-white/10 border border-white/20 hover:border-white/40 rounded-lg flex items-center justify-center text-gray-300 hover:text-white transition-all"
                 title="Email"
               >
                 <Mail className="w-5 h-5" />
