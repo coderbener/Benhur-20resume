@@ -15,10 +15,10 @@ export default function Skills() {
   ];
 
   return (
-    <section id="skills" className="bg-slate-900 py-24 px-4 sm:px-6 lg:px-8">
+    <section id="skills" className="bg-black py-24 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         {/* Heading */}
-        <h2 className="text-4xl sm:text-5xl md:text-5xl font-serif font-bold tracking-tight mb-4 bg-gradient-to-r from-purple-300 to-cyan-300 bg-clip-text text-transparent">
+        <h2 className="text-4xl sm:text-5xl md:text-5xl font-bold tracking-tight mb-4 text-white">
           Technical Skills
         </h2>
         <p className="text-gray-400 font-sans text-base mb-16 max-w-2xl">
@@ -30,13 +30,13 @@ export default function Skills() {
           {skillCategories.map((skillGroup, index) => (
             <div
               key={index}
-              className="group relative p-8 sm:p-10 rounded-xl border border-purple-500/30 bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm hover:border-purple-500/60 transition-all duration-300 hover:shadow-xl hover:shadow-purple-500/10"
+              className="group relative p-8 sm:p-10 rounded-xl border border-white/20 bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm hover:border-white/40 transition-all duration-300 hover:shadow-xl hover:shadow-white/10"
             >
               {/* Gradient overlay on hover */}
-              <div className="absolute inset-0 bg-gradient-to-br from-purple-600/5 to-cyan-600/5 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-white/5 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
 
               {/* Category Title */}
-              <h3 className="text-2xl sm:text-3xl font-serif font-bold text-white mb-8 relative z-10">
+              <h3 className="text-2xl sm:text-3xl font-bold text-white mb-8 relative z-10">
                 {skillGroup.category}
               </h3>
 
@@ -47,8 +47,8 @@ export default function Skills() {
                     key={skillIndex}
                     className="text-gray-300 font-sans text-base flex items-center gap-3 group/item"
                   >
-                    <span className="text-purple-400 text-lg font-bold group-hover/item:text-cyan-400 transition-colors">✓</span>
-                    <span className="group-hover/item:text-purple-300 transition-colors">{skill}</span>
+                    <span className="text-gray-400 text-lg font-bold group-hover/item:text-white transition-colors">✓</span>
+                    <span className="group-hover/item:text-white transition-colors">{skill}</span>
                   </li>
                 ))}
               </ul>
