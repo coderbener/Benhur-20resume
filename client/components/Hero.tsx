@@ -57,8 +57,8 @@ export default function Hero() {
               <img
                 src="https://cdn.builder.io/api/v1/image/assets%2Fbc603bacd4e645ed8ab163ef56e09eb6%2Fba3925f1441e4da8ae9b87b808cd5493?format=webp&width=800"
                 alt="Benhur Santhosh"
-                className="relative w-80 h-80 rounded-full object-cover shadow-2xl border-2 transition-all duration-300 hover:border-yellow-300"
-                style={{ borderColor: "rgba(245, 158, 11, 0.5)", boxShadow: "0 0 25px rgba(245, 158, 11, 0.2)" }}
+                className="relative w-80 h-80 rounded-full object-cover shadow-2xl border-2 transition-all duration-300 hover:border-red-300"
+                style={{ borderColor: "rgba(239, 68, 68, 0.5)", boxShadow: "0 0 25px rgba(239, 68, 68, 0.2)" }}
               />
             </div>
           </div>
