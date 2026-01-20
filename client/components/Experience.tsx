@@ -27,20 +27,21 @@ export default function Experience() {
   ];
 
   return (
-    <section id="experience" className="bg-gradient-to-b from-slate-900 to-blue-900 py-24 px-4 sm:px-6 lg:px-8">
+    <section id="experience" className="py-24 px-4 sm:px-6 lg:px-8 relative"
+      style={{ background: "linear-gradient(180deg, #1e293b 0%, #0f172a 100%)" }}>
       <div className="max-w-5xl mx-auto">
         {/* Heading */}
-        <h2 className="text-4xl sm:text-5xl md:text-5xl font-bold tracking-tight mb-4 bg-gradient-to-r from-emerald-300 to-amber-300 bg-clip-text text-transparent">
-          Work Experience
+        <h2 className="text-4xl sm:text-5xl md:text-5xl font-bold tracking-tight mb-4 text-white">
+          Work <span className="text-yellow-300">Experience</span>
         </h2>
-        <p className="text-gray-400 font-sans text-base mb-16">
+        <p className="text-slate-400 font-sans text-base mb-16">
           Professional internships and hands-on learning.
         </p>
 
         {/* Experience Timeline */}
         <div className="space-y-8 relative">
           {/* Timeline line */}
-          <div className="absolute left-6 top-0 bottom-0 w-1 bg-gradient-to-b from-emerald-500 to-amber-500"></div>
+          <div className="absolute left-6 top-0 bottom-0 w-1" style={{ background: "linear-gradient(180deg, rgba(245, 158, 11, 0.6), rgba(245, 158, 11, 0.2))" }}></div>
 
           {experiences.map((exp, index) => (
             <div
@@ -48,24 +49,34 @@ export default function Experience() {
               className="relative pl-20"
             >
               {/* Timeline dot */}
-              <div className="absolute -left-4 top-2 w-6 h-6 bg-gradient-to-r from-emerald-500 to-amber-500 rounded-full border-4 border-slate-900"></div>
+              <div className="absolute -left-4 top-2 w-6 h-6 bg-yellow-500 rounded-full border-4 transition-all hover:shadow-lg hover:scale-110"
+                   style={{ borderColor: "#1e293b", boxShadow: "0 0 12px rgba(245, 158, 11, 0.3)" }}></div>
 
               {/* Content */}
-              <div className="bg-slate-800/50 backdrop-blur-md border border-emerald-500/30 rounded-lg p-8 hover:border-emerald-500/60 hover:shadow-xl hover:shadow-emerald-500/20 transition-all duration-300">
+              <div className="rounded-lg p-8 transition-all duration-300 hover:-translate-y-1"
+                   style={{ borderColor: "rgba(245, 158, 11, 0.3)", background: "rgba(30, 41, 59, 0.5)", border: "1px solid rgba(245, 158, 11, 0.3)" }}
+                   onMouseEnter={(e) => {
+                     e.currentTarget.style.borderColor = "rgba(245, 158, 11, 0.6)";
+                     e.currentTarget.style.boxShadow = "0 0 30px rgba(245, 158, 11, 0.2)";
+                   }}
+                   onMouseLeave={(e) => {
+                     e.currentTarget.style.borderColor = "rgba(245, 158, 11, 0.3)";
+                     e.currentTarget.style.boxShadow = "0 0 0";
+                   }}>
                 <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4 mb-4">
                   <div className="flex-grow">
                     <h3 className="text-2xl sm:text-2xl font-bold text-white">
                       {exp.position}
                     </h3>
-                    <p className="text-emerald-300 font-sans font-semibold text-base mt-2">
+                    <p className="text-yellow-300 font-sans font-semibold text-base mt-2">
                       {exp.company}
                     </p>
-                    <p className="text-gray-400 font-sans text-sm mt-1">
+                    <p className="text-slate-400 font-sans text-sm mt-1">
                       {exp.location}
                     </p>
                   </div>
                   <div className="text-right">
-                    <p className="text-amber-300 font-sans font-semibold text-base whitespace-nowrap">
+                    <p className="text-yellow-300 font-sans font-semibold text-base whitespace-nowrap">
                       {exp.period}
                     </p>
                   </div>
@@ -76,9 +87,9 @@ export default function Experience() {
                   {exp.achievements.map((achievement, index) => (
                     <li
                       key={index}
-                      className="text-gray-300 font-sans text-sm flex gap-3 items-start"
+                      className="text-slate-300 font-sans text-sm flex gap-3 items-start"
                     >
-                      <span className="text-emerald-400 mt-1.5 flex-shrink-0 font-bold">→</span>
+                      <span className="text-yellow-400 mt-1.5 flex-shrink-0 font-bold">→</span>
                       <span>{achievement}</span>
                     </li>
                   ))}
