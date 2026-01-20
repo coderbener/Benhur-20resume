@@ -51,46 +51,20 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* Right side - Photo with Advanced Animations */}
+          {/* Right side - Photo with Minimal Elegant Animation */}
           <div className="flex justify-center">
-            <div className="relative group w-96 h-96 flex items-center justify-center">
-              {/* Outer rotating ring - Gold border */}
-              <div className="absolute inset-0 rounded-full border-2 animate-orbit-outer"
-                   style={{ borderColor: "rgba(245, 158, 11, 0.4)", boxShadow: "0 0 20px rgba(245, 158, 11, 0.2)" }}></div>
+            <div className="relative group">
+              {/* Subtle background glow layer */}
+              <div className="absolute -inset-4 rounded-full blur-xl opacity-20 group-hover:opacity-30 transition-opacity duration-500"
+                   style={{ background: "radial-gradient(circle, #f59e0b, transparent)" }}></div>
 
-              {/* Second rotating ring - inverted direction */}
-              <div className="absolute inset-4 rounded-full border border-yellow-600/30 animate-orbit-middle"
-                   style={{ boxShadow: "0 0 15px rgba(245, 158, 11, 0.15) inset" }}></div>
-
-              {/* Inner rotating ring - faster */}
-              <div className="absolute inset-8 rounded-full border border-yellow-500/20 animate-orbit-inner"
-                   style={{ boxShadow: "0 0 10px rgba(245, 158, 11, 0.1)" }}></div>
-
-              {/* Glow sphere - pulsing effect */}
-              <div className="absolute -inset-2 rounded-full blur-3xl opacity-30 animate-expand-contract group-hover:opacity-50 transition duration-500"
-                   style={{ background: "radial-gradient(circle, #f59e0b, #f59e0b)" }}></div>
-
-              {/* Bright glow aura */}
-              <div className="absolute -inset-6 rounded-full blur-2xl opacity-20 animate-float-slow"
-                   style={{ background: "radial-gradient(circle, rgba(245, 158, 11, 0.6), transparent)" }}></div>
-
-              {/* Photo with enhanced border glow */}
+              {/* Photo with minimal glow animation */}
               <img
                 src="https://cdn.builder.io/api/v1/image/assets%2Fbc603bacd4e645ed8ab163ef56e09eb6%2Fba3925f1441e4da8ae9b87b808cd5493?format=webp&width=800"
                 alt="Benhur Santhosh"
-                className="relative w-80 h-80 rounded-full object-cover shadow-2xl border-4 transition-all duration-300 animate-border-glow z-10"
-                style={{ borderColor: "rgba(245, 158, 11, 0.6)", boxShadow: "0 0 40px rgba(245, 158, 11, 0.4), inset 0 0 20px rgba(245, 158, 11, 0.1)" }}
+                className="relative w-80 h-80 rounded-full object-cover shadow-2xl border-2 animate-subtle-glow animate-soft-scale transition-all duration-300"
+                style={{ borderColor: "rgba(245, 158, 11, 0.5)" }}
               />
-
-              {/* Security dots animation - corners */}
-              <div className="absolute top-0 left-0 w-3 h-3 rounded-full bg-yellow-400 animate-pulse-border"
-                   style={{ boxShadow: "0 0 8px rgba(245, 158, 11, 0.8)" }}></div>
-              <div className="absolute top-0 right-0 w-3 h-3 rounded-full bg-yellow-400 animate-pulse-border"
-                   style={{ boxShadow: "0 0 8px rgba(245, 158, 11, 0.8)", animationDelay: "0.5s" }}></div>
-              <div className="absolute bottom-0 right-0 w-3 h-3 rounded-full bg-yellow-400 animate-pulse-border"
-                   style={{ boxShadow: "0 0 8px rgba(245, 158, 11, 0.8)", animationDelay: "1s" }}></div>
-              <div className="absolute bottom-0 left-0 w-3 h-3 rounded-full bg-yellow-400 animate-pulse-border"
-                   style={{ boxShadow: "0 0 8px rgba(245, 158, 11, 0.8)", animationDelay: "1.5s" }}></div>
             </div>
           </div>
         </div>
