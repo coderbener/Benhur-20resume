@@ -21,30 +21,30 @@ export default function Hero() {
           {/* Left side - Text */}
           <div className="space-y-6">
             <div className="space-y-4">
-              <div className="inline-block px-4 py-2 border border-yellow-500/60 rounded-full mb-4 backdrop-blur-sm transition-all hover:border-yellow-400"
-                   style={{ background: "rgba(245, 158, 11, 0.08)" }}>
-                <p className="text-yellow-200 text-sm font-semibold">Welcome to my portfolio</p>
+              <div className="inline-block px-4 py-2 border border-red-500/60 rounded-full mb-4 backdrop-blur-sm transition-all hover:border-red-400"
+                   style={{ background: "rgba(239, 68, 68, 0.08)" }}>
+                <p className="text-red-200 text-sm font-semibold">Welcome to my portfolio</p>
               </div>
               <h1
                 className="text-5xl sm:text-6xl md:text-7xl font-bold tracking-tighter leading-tight text-white"
                 style={{ fontFamily: '"Space Grotesk", sans-serif', letterSpacing: '-0.02em' }}
               >
                 Benhur<br />
-                <span className="text-yellow-300">Santhosh</span>
+                <span className="text-red-400">Santhosh</span>
               </h1>
             </div>
 
             {/* Sub-headline */}
             <p className="text-base sm:text-lg text-slate-300 leading-relaxed max-w-lg">
-              Final year CS student specializing in <span className="text-yellow-300 font-semibold">Cybersecurity</span>, <span className="text-yellow-300 font-semibold">Penetration Testing</span>, and <span className="text-yellow-300 font-semibold">Ethical Hacking</span>.
+              Final year CS student specializing in <span className="text-red-400 font-semibold">Cybersecurity</span>, <span className="text-red-400 font-semibold">Penetration Testing</span>, and <span className="text-red-400 font-semibold">Ethical Hacking</span>.
             </p>
 
             {/* CTA Buttons */}
             <div className="flex gap-4 pt-4">
               <button
                 onClick={scrollToProjects}
-                className="group relative px-8 py-4 bg-yellow-500 hover:bg-yellow-400 text-slate-900 font-semibold rounded-lg transition-all duration-300 hover:shadow-2xl hover:scale-105"
-                style={{ boxShadow: "0 0 20px rgba(245, 158, 11, 0.3)" }}
+                className="group relative px-8 py-4 bg-red-500 hover:bg-red-400 text-white font-semibold rounded-lg transition-all duration-300 hover:shadow-2xl hover:scale-105"
+                style={{ boxShadow: "0 0 20px rgba(239, 68, 68, 0.3)" }}
               >
                 <span className="relative z-10">View My Work</span>
               </button>
