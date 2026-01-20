@@ -23,24 +23,16 @@ export default function Navbar({
   };
 
   return (
-    <nav
-      className="fixed top-0 w-full z-50 backdrop-blur-xl transition-all duration-300"
-      style={{
-        background: "rgba(30, 41, 59, 0.7)",
-        borderBottom: "1px solid rgba(245, 158, 11, 0.1)",
-      }}
-    >
+    <nav className="fixed top-0 w-full z-50 backdrop-blur-xl transition-all duration-300"
+         style={{ background: "rgba(20, 20, 20, 0.7)", borderBottom: "1px solid rgba(239, 68, 68, 0.1)" }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <div className="flex-shrink-0">
             <a
               href="/"
-              className="text-2xl font-bold tracking-tighter text-yellow-300 hover:text-yellow-200 transition-colors"
-              style={{
-                fontFamily: '"Space Grotesk", sans-serif',
-                letterSpacing: "-0.02em",
-              }}
+              className="text-2xl font-bold tracking-tighter text-red-400 hover:text-red-300 transition-colors"
+              style={{ fontFamily: '"Space Grotesk", sans-serif', letterSpacing: '-0.02em' }}
             >
               Benhur
             </a>
@@ -50,38 +42,38 @@ export default function Navbar({
           <div className="hidden md:flex items-center gap-8">
             <button
               onClick={() => scrollToSection("projects")}
-              className="text-slate-300 hover:text-yellow-300 transition-colors font-sans text-sm font-medium relative group"
+              className="text-slate-300 hover:text-red-400 transition-colors font-sans text-sm font-medium relative group"
             >
               Projects
-              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-yellow-400 group-hover:w-full transition-all duration-300"></span>
+              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-red-500 group-hover:w-full transition-all duration-300"></span>
             </button>
             <button
               onClick={() => scrollToSection("skills")}
-              className="text-slate-300 hover:text-yellow-300 transition-colors font-sans text-sm font-medium relative group"
+              className="text-slate-300 hover:text-red-400 transition-colors font-sans text-sm font-medium relative group"
             >
               Skills
-              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-yellow-400 group-hover:w-full transition-all duration-300"></span>
+              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-red-500 group-hover:w-full transition-all duration-300"></span>
             </button>
             <button
               onClick={() => scrollToSection("experience")}
-              className="text-slate-300 hover:text-yellow-300 transition-colors font-sans text-sm font-medium relative group"
+              className="text-slate-300 hover:text-red-400 transition-colors font-sans text-sm font-medium relative group"
             >
               Experience
-              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-yellow-400 group-hover:w-full transition-all duration-300"></span>
+              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-red-500 group-hover:w-full transition-all duration-300"></span>
             </button>
             <button
               onClick={() => scrollToSection("education")}
-              className="text-slate-300 hover:text-yellow-300 transition-colors font-sans text-sm font-medium relative group"
+              className="text-slate-300 hover:text-red-400 transition-colors font-sans text-sm font-medium relative group"
             >
               Education
-              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-yellow-400 group-hover:w-full transition-all duration-300"></span>
+              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-red-500 group-hover:w-full transition-all duration-300"></span>
             </button>
             <button
               onClick={() => scrollToSection("contact")}
-              className="text-slate-300 hover:text-yellow-300 transition-colors font-sans text-sm font-medium relative group"
+              className="text-slate-300 hover:text-red-400 transition-colors font-sans text-sm font-medium relative group"
             >
               Contact
-              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-yellow-400 group-hover:w-full transition-all duration-300"></span>
+              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-red-500 group-hover:w-full transition-all duration-300"></span>
             </button>
           </div>
 
@@ -89,8 +81,8 @@ export default function Navbar({
           <div className="hidden md:flex">
             <button
               onClick={() => scrollToSection("contact")}
-              className="px-6 py-2 bg-yellow-500 hover:bg-yellow-400 text-slate-900 font-sans text-sm font-medium rounded-lg transition-all duration-300 hover:shadow-lg hover:scale-105"
-              style={{ boxShadow: "0 0 15px rgba(245, 158, 11, 0.3)" }}
+              className="px-6 py-2 bg-red-500 hover:bg-red-400 text-white font-sans text-sm font-medium rounded-lg transition-all duration-300 hover:shadow-lg hover:scale-105"
+              style={{ boxShadow: "0 0 15px rgba(239, 68, 68, 0.3)" }}
             >
               Get In Touch
             </button>
@@ -100,7 +92,7 @@ export default function Navbar({
           <div className="md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-slate-300 hover:text-yellow-300 transition-colors"
+              className="text-slate-300 hover:text-red-400 transition-colors"
             >
               {isOpen ? (
                 <X className="w-6 h-6" />
@@ -113,52 +105,47 @@ export default function Navbar({
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div
-            className="md:hidden backdrop-blur-xl transition-all duration-300"
-            style={{
-              background: "rgba(30, 41, 59, 0.9)",
-              borderTop: "1px solid rgba(245, 158, 11, 0.1)",
-            }}
-          >
+          <div className="md:hidden backdrop-blur-xl transition-all duration-300"
+               style={{ background: "rgba(20, 20, 20, 0.9)", borderTop: "1px solid rgba(239, 68, 68, 0.1)" }}>
             <div className="px-2 pt-2 pb-3 space-y-1">
               <button
                 onClick={() => scrollToSection("projects")}
-                className="block w-full text-left px-3 py-2 text-slate-300 hover:text-yellow-300 rounded transition-colors font-sans text-sm"
-                style={{ background: "rgba(245, 158, 11, 0.05)" }}
+                className="block w-full text-left px-3 py-2 text-slate-300 hover:text-red-400 rounded transition-colors font-sans text-sm"
+                style={{ background: "rgba(239, 68, 68, 0.05)" }}
               >
                 Projects
               </button>
               <button
                 onClick={() => scrollToSection("skills")}
-                className="block w-full text-left px-3 py-2 text-slate-300 hover:text-yellow-300 rounded transition-colors font-sans text-sm"
-                style={{ background: "rgba(245, 158, 11, 0.05)" }}
+                className="block w-full text-left px-3 py-2 text-slate-300 hover:text-red-400 rounded transition-colors font-sans text-sm"
+                style={{ background: "rgba(239, 68, 68, 0.05)" }}
               >
                 Skills
               </button>
               <button
                 onClick={() => scrollToSection("experience")}
-                className="block w-full text-left px-3 py-2 text-slate-300 hover:text-yellow-300 rounded transition-colors font-sans text-sm"
-                style={{ background: "rgba(245, 158, 11, 0.05)" }}
+                className="block w-full text-left px-3 py-2 text-slate-300 hover:text-red-400 rounded transition-colors font-sans text-sm"
+                style={{ background: "rgba(239, 68, 68, 0.05)" }}
               >
                 Experience
               </button>
               <button
                 onClick={() => scrollToSection("education")}
-                className="block w-full text-left px-3 py-2 text-slate-300 hover:text-yellow-300 rounded transition-colors font-sans text-sm"
-                style={{ background: "rgba(245, 158, 11, 0.05)" }}
+                className="block w-full text-left px-3 py-2 text-slate-300 hover:text-red-400 rounded transition-colors font-sans text-sm"
+                style={{ background: "rgba(239, 68, 68, 0.05)" }}
               >
                 Education
               </button>
               <button
                 onClick={() => scrollToSection("contact")}
-                className="block w-full text-left px-3 py-2 text-slate-300 hover:text-yellow-300 rounded transition-colors font-sans text-sm"
-                style={{ background: "rgba(245, 158, 11, 0.05)" }}
+                className="block w-full text-left px-3 py-2 text-slate-300 hover:text-red-400 rounded transition-colors font-sans text-sm"
+                style={{ background: "rgba(239, 68, 68, 0.05)" }}
               >
                 Contact
               </button>
               <button
                 onClick={() => scrollToSection("contact")}
-                className="block w-full text-left px-3 py-2 bg-yellow-500 text-slate-900 hover:bg-yellow-400 rounded mt-4 transition-all font-sans text-sm font-medium"
+                className="block w-full text-left px-3 py-2 bg-red-500 text-white hover:bg-red-400 rounded mt-4 transition-all font-sans text-sm font-medium"
               >
                 Get In Touch
               </button>
