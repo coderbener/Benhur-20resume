@@ -27,8 +27,13 @@ export default function Education() {
   ];
 
   return (
-    <section id="education" className="py-24 px-4 sm:px-6 lg:px-8 relative"
-      style={{ background: "linear-gradient(180deg, #0f172a 0%, #1e293b 100%)" }}>
+    <section
+      id="education"
+      className="py-24 px-4 sm:px-6 lg:px-8 relative"
+      style={{
+        background: "linear-gradient(180deg, #0f172a 0%, #1e293b 100%)",
+      }}
+    >
       <div className="max-w-5xl mx-auto">
         {/* Heading */}
         <h2 className="text-4xl sm:text-5xl md:text-5xl font-bold tracking-tight mb-4 text-white">
@@ -44,10 +49,14 @@ export default function Education() {
             <div
               key={item.id}
               className="group p-8 sm:p-10 rounded-2xl border transition-all duration-300 hover:-translate-y-1"
-              style={{ borderColor: "rgba(245, 158, 11, 0.3)", background: "rgba(30, 41, 59, 0.5)" }}
+              style={{
+                borderColor: "rgba(245, 158, 11, 0.3)",
+                background: "rgba(30, 41, 59, 0.5)",
+              }}
               onMouseEnter={(e) => {
                 e.currentTarget.style.borderColor = "rgba(245, 158, 11, 0.6)";
-                e.currentTarget.style.boxShadow = "0 0 30px rgba(245, 158, 11, 0.2)";
+                e.currentTarget.style.boxShadow =
+                  "0 0 30px rgba(245, 158, 11, 0.2)";
               }}
               onMouseLeave={(e) => {
                 e.currentTarget.style.borderColor = "rgba(245, 158, 11, 0.3)";
@@ -72,7 +81,9 @@ export default function Education() {
                   </p>
                 </div>
               </div>
-              <p className="text-slate-300 font-sans text-base">{item.details}</p>
+              <p className="text-slate-300 font-sans text-base">
+                {item.details}
+              </p>
             </div>
           ))}
         </div>

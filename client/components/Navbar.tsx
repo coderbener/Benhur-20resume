@@ -23,8 +23,13 @@ export default function Navbar({
   };
 
   return (
-    <nav className="fixed top-0 w-full z-50 backdrop-blur-xl transition-all duration-300"
-         style={{ background: "rgba(30, 41, 59, 0.7)", borderBottom: "1px solid rgba(245, 158, 11, 0.1)" }}>
+    <nav
+      className="fixed top-0 w-full z-50 backdrop-blur-xl transition-all duration-300"
+      style={{
+        background: "rgba(30, 41, 59, 0.7)",
+        borderBottom: "1px solid rgba(245, 158, 11, 0.1)",
+      }}
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
@@ -32,7 +37,10 @@ export default function Navbar({
             <a
               href="/"
               className="text-2xl font-bold tracking-tighter text-yellow-300 hover:text-yellow-200 transition-colors"
-              style={{ fontFamily: '"Space Grotesk", sans-serif', letterSpacing: '-0.02em' }}
+              style={{
+                fontFamily: '"Space Grotesk", sans-serif',
+                letterSpacing: "-0.02em",
+              }}
             >
               Benhur
             </a>
@@ -105,8 +113,13 @@ export default function Navbar({
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="md:hidden backdrop-blur-xl transition-all duration-300"
-               style={{ background: "rgba(30, 41, 59, 0.9)", borderTop: "1px solid rgba(245, 158, 11, 0.1)" }}>
+          <div
+            className="md:hidden backdrop-blur-xl transition-all duration-300"
+            style={{
+              background: "rgba(30, 41, 59, 0.9)",
+              borderTop: "1px solid rgba(245, 158, 11, 0.1)",
+            }}
+          >
             <div className="px-2 pt-2 pb-3 space-y-1">
               <button
                 onClick={() => scrollToSection("projects")}

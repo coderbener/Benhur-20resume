@@ -9,34 +9,61 @@ export default function Hero() {
   };
 
   return (
-    <section className="min-h-screen flex flex-col items-center justify-center pt-20 pb-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden"
-      style={{ background: "linear-gradient(180deg, #0f172a 0%, #1e293b 100%)" }}>
-
+    <section
+      className="min-h-screen flex flex-col items-center justify-center pt-20 pb-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden"
+      style={{
+        background: "linear-gradient(180deg, #0f172a 0%, #1e293b 100%)",
+      }}
+    >
       {/* Subtle background glow */}
-      <div className="absolute top-1/3 left-1/2 transform -translate-x-1/2 w-96 h-96 opacity-[0.08] rounded-full blur-3xl"
-           style={{ background: "radial-gradient(circle, #f59e0b 0%, transparent 70%)" }}></div>
+      <div
+        className="absolute top-1/3 left-1/2 transform -translate-x-1/2 w-96 h-96 opacity-[0.08] rounded-full blur-3xl"
+        style={{
+          background: "radial-gradient(circle, #f59e0b 0%, transparent 70%)",
+        }}
+      ></div>
 
       <div className="max-w-5xl mx-auto w-full space-y-8 animate-fade-in relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           {/* Left side - Text */}
           <div className="space-y-6">
             <div className="space-y-4">
-              <div className="inline-block px-4 py-2 border border-yellow-500/60 rounded-full mb-4 backdrop-blur-sm transition-all hover:border-yellow-400"
-                   style={{ background: "rgba(245, 158, 11, 0.08)" }}>
-                <p className="text-yellow-200 text-sm font-semibold">Welcome to my portfolio</p>
+              <div
+                className="inline-block px-4 py-2 border border-yellow-500/60 rounded-full mb-4 backdrop-blur-sm transition-all hover:border-yellow-400"
+                style={{ background: "rgba(245, 158, 11, 0.08)" }}
+              >
+                <p className="text-yellow-200 text-sm font-semibold">
+                  Welcome to my portfolio
+                </p>
               </div>
               <h1
                 className="text-5xl sm:text-6xl md:text-7xl font-bold tracking-tighter leading-tight text-white"
-                style={{ fontFamily: '"Space Grotesk", sans-serif', letterSpacing: '-0.02em' }}
+                style={{
+                  fontFamily: '"Space Grotesk", sans-serif',
+                  letterSpacing: "-0.02em",
+                }}
               >
-                Benhur<br />
+                Benhur
+                <br />
                 <span className="text-yellow-300">Santhosh</span>
               </h1>
             </div>
 
             {/* Sub-headline */}
             <p className="text-base sm:text-lg text-slate-300 leading-relaxed max-w-lg">
-              Final year CS student specializing in <span className="text-yellow-300 font-semibold">Cybersecurity</span>, <span className="text-yellow-300 font-semibold">Penetration Testing</span>, and <span className="text-yellow-300 font-semibold">Ethical Hacking</span>.
+              Final year CS student specializing in{" "}
+              <span className="text-yellow-300 font-semibold">
+                Cybersecurity
+              </span>
+              ,{" "}
+              <span className="text-yellow-300 font-semibold">
+                Penetration Testing
+              </span>
+              , and{" "}
+              <span className="text-yellow-300 font-semibold">
+                Ethical Hacking
+              </span>
+              .
             </p>
 
             {/* CTA Buttons */}
@@ -58,7 +85,10 @@ export default function Hero() {
                 src="https://cdn.builder.io/api/v1/image/assets%2Fbc603bacd4e645ed8ab163ef56e09eb6%2Fba3925f1441e4da8ae9b87b808cd5493?format=webp&width=800"
                 alt="Benhur Santhosh"
                 className="relative w-80 h-80 rounded-full object-cover shadow-2xl border-2 transition-all duration-300 hover:border-yellow-300"
-                style={{ borderColor: "rgba(245, 158, 11, 0.5)", boxShadow: "0 0 25px rgba(245, 158, 11, 0.2)" }}
+                style={{
+                  borderColor: "rgba(245, 158, 11, 0.5)",
+                  boxShadow: "0 0 25px rgba(245, 158, 11, 0.2)",
+                }}
               />
             </div>
           </div>

@@ -20,7 +20,9 @@ export default function Certifications() {
     <section
       id="certifications"
       className="py-24 px-4 sm:px-6 lg:px-8 relative"
-      style={{ background: "linear-gradient(180deg, #0f172a 0%, #1e293b 100%)" }}
+      style={{
+        background: "linear-gradient(180deg, #0f172a 0%, #1e293b 100%)",
+      }}
     >
       <div className="max-w-5xl mx-auto">
         {/* Heading */}
@@ -37,10 +39,14 @@ export default function Certifications() {
             <div
               key={cert.id}
               className="group relative p-8 sm:p-10 rounded-lg border transition-all duration-300 hover:-translate-y-1"
-              style={{ background: "rgba(30, 41, 59, 0.5)", borderColor: "rgba(245, 158, 11, 0.3)" }}
+              style={{
+                background: "rgba(30, 41, 59, 0.5)",
+                borderColor: "rgba(245, 158, 11, 0.3)",
+              }}
               onMouseEnter={(e) => {
                 e.currentTarget.style.borderColor = "rgba(245, 158, 11, 0.6)";
-                e.currentTarget.style.boxShadow = "0 0 30px rgba(245, 158, 11, 0.2)";
+                e.currentTarget.style.boxShadow =
+                  "0 0 30px rgba(245, 158, 11, 0.2)";
               }}
               onMouseLeave={(e) => {
                 e.currentTarget.style.borderColor = "rgba(245, 158, 11, 0.3)";

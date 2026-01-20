@@ -33,15 +33,21 @@ export default function Projects() {
   ];
 
   return (
-    <section id="projects" className="py-24 px-4 sm:px-6 lg:px-8 relative"
-      style={{ background: "linear-gradient(180deg, #1e293b 0%, #0f172a 100%)" }}>
+    <section
+      id="projects"
+      className="py-24 px-4 sm:px-6 lg:px-8 relative"
+      style={{
+        background: "linear-gradient(180deg, #1e293b 0%, #0f172a 100%)",
+      }}
+    >
       <div className="max-w-7xl mx-auto">
         {/* Heading */}
         <h2 className="text-4xl sm:text-5xl md:text-5xl font-bold tracking-tight mb-4 text-white">
           Featured <span className="text-yellow-300">Projects</span>
         </h2>
         <p className="text-slate-400 font-sans text-base mb-16 max-w-2xl">
-          Innovative solutions demonstrating expertise in computer vision, web development, and cybersecurity.
+          Innovative solutions demonstrating expertise in computer vision, web
+          development, and cybersecurity.
         </p>
 
         {/* Projects Grid */}
@@ -50,9 +56,14 @@ export default function Projects() {
             <div
               key={project.id}
               className="group relative overflow-hidden rounded-2xl transition-all duration-500 hover:-translate-y-2 border"
-              style={{ borderColor: "rgba(245, 158, 11, 0.3)", background: "rgba(30, 41, 59, 0.5)", boxShadow: "0 0 0 rgba(245, 158, 11, 0)" }}
+              style={{
+                borderColor: "rgba(245, 158, 11, 0.3)",
+                background: "rgba(30, 41, 59, 0.5)",
+                boxShadow: "0 0 0 rgba(245, 158, 11, 0)",
+              }}
               onMouseEnter={(e) => {
-                e.currentTarget.style.boxShadow = "0 0 30px rgba(245, 158, 11, 0.3)";
+                e.currentTarget.style.boxShadow =
+                  "0 0 30px rgba(245, 158, 11, 0.3)";
                 e.currentTarget.style.borderColor = "rgba(245, 158, 11, 0.6)";
               }}
               onMouseLeave={(e) => {
@@ -61,15 +72,25 @@ export default function Projects() {
               }}
             >
               {/* Project Image */}
-              <div className="relative h-64 sm:h-80 overflow-hidden"
-                   style={{ background: "linear-gradient(135deg, #1e293b, #0f172a)" }}>
+              <div
+                className="relative h-64 sm:h-80 overflow-hidden"
+                style={{
+                  background: "linear-gradient(135deg, #1e293b, #0f172a)",
+                }}
+              >
                 <img
                   src={project.image}
                   alt={project.title}
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                 />
-                <div className="absolute inset-0 group-hover:opacity-40 transition-opacity"
-                     style={{ background: "linear-gradient(to top, rgba(15, 23, 42, 0.9), transparent)", opacity: "0.6" }}></div>
+                <div
+                  className="absolute inset-0 group-hover:opacity-40 transition-opacity"
+                  style={{
+                    background:
+                      "linear-gradient(to top, rgba(15, 23, 42, 0.9), transparent)",
+                    opacity: "0.6",
+                  }}
+                ></div>
               </div>
 
               {/* Project Content */}
@@ -96,7 +117,9 @@ export default function Projects() {
                       key={index}
                       className="text-slate-300 font-sans text-sm flex items-start gap-3"
                     >
-                      <span className="text-yellow-400 mt-1 flex-shrink-0 font-bold">✓</span>
+                      <span className="text-yellow-400 mt-1 flex-shrink-0 font-bold">
+                        ✓
+                      </span>
                       <span>{highlight}</span>
                     </li>
                   ))}

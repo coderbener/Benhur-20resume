@@ -69,7 +69,8 @@ export default function InteractiveBackground() {
       <div
         className="absolute w-[450px] h-[450px] rounded-full mix-blend-multiply filter blur-3xl opacity-8 animate-orbit-outer"
         style={{
-          background: "radial-gradient(circle, rgba(30, 41, 59, 0.8), transparent)",
+          background:
+            "radial-gradient(circle, rgba(30, 41, 59, 0.8), transparent)",
           bottom: `5%`,
           left: `-5%`,
         }}
@@ -100,7 +101,8 @@ export default function InteractiveBackground() {
       <div
         className="absolute w-96 h-96 rounded-full animate-cyber-pulse"
         style={{
-          background: "radial-gradient(circle, rgba(245, 158, 11, 0.2), transparent)",
+          background:
+            "radial-gradient(circle, rgba(245, 158, 11, 0.2), transparent)",
           top: "50%",
           left: "50%",
           transform: "translate(-50%, -50%)",
@@ -115,9 +117,10 @@ export default function InteractiveBackground() {
           style={{
             width: "300px",
             height: "300px",
-            background: "radial-gradient(circle, #f59e0b, rgba(245, 158, 11, 0))",
-            top: `${mousePos.y / window.innerHeight * 100}%`,
-            left: `${mousePos.x / window.innerWidth * 100}%`,
+            background:
+              "radial-gradient(circle, #f59e0b, rgba(245, 158, 11, 0))",
+            top: `${(mousePos.y / window.innerHeight) * 100}%`,
+            left: `${(mousePos.x / window.innerWidth) * 100}%`,
             transform: "translate(-50%, -50%)",
             opacity: 0.25,
             boxShadow: "0 0 60px rgba(245, 158, 11, 0.5)",
@@ -129,7 +132,8 @@ export default function InteractiveBackground() {
       <div
         className="absolute w-full h-1"
         style={{
-          background: "linear-gradient(90deg, transparent, rgba(245, 158, 11, 0.3), transparent)",
+          background:
+            "linear-gradient(90deg, transparent, rgba(245, 158, 11, 0.3), transparent)",
           top: "50%",
           animation: "scan-line 6s linear infinite",
           boxShadow: "0 0 20px rgba(245, 158, 11, 0.4)",

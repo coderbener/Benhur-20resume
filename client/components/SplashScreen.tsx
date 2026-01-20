@@ -21,7 +21,10 @@ export default function SplashScreen({ onComplete }: SplashScreenProps) {
       className={`fixed inset-0 z-50 flex items-center justify-center transition-opacity duration-500 ${
         isExiting ? "opacity-0" : "opacity-100"
       }`}
-      style={{ background: "linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%)" }}
+      style={{
+        background:
+          "linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%)",
+      }}
     >
       <style>
         {`
@@ -94,10 +97,18 @@ export default function SplashScreen({ onComplete }: SplashScreenProps) {
 
       {/* Background decorative elements */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-1/4 right-1/4 w-64 h-64 opacity-5 rounded-full blur-3xl"
-             style={{ background: "radial-gradient(circle, #f59e0b 0%, transparent 70%)" }}></div>
-        <div className="absolute bottom-1/4 left-1/4 w-80 h-80 opacity-5 rounded-full blur-3xl"
-             style={{ background: "radial-gradient(circle, #f59e0b 0%, transparent 70%)" }}></div>
+        <div
+          className="absolute top-1/4 right-1/4 w-64 h-64 opacity-5 rounded-full blur-3xl"
+          style={{
+            background: "radial-gradient(circle, #f59e0b 0%, transparent 70%)",
+          }}
+        ></div>
+        <div
+          className="absolute bottom-1/4 left-1/4 w-80 h-80 opacity-5 rounded-full blur-3xl"
+          style={{
+            background: "radial-gradient(circle, #f59e0b 0%, transparent 70%)",
+          }}
+        ></div>
       </div>
 
       <div className="relative flex flex-col items-center justify-center z-10">
@@ -107,22 +118,35 @@ export default function SplashScreen({ onComplete }: SplashScreenProps) {
               ? "scale-90 opacity-0 transition-all duration-1000"
               : "scale-100 text-reveal"
           }`}
-          style={{ fontFamily: '"Space Grotesk", sans-serif', letterSpacing: '-0.02em' }}
+          style={{
+            fontFamily: '"Space Grotesk", sans-serif',
+            letterSpacing: "-0.02em",
+          }}
         >
           Benhur
         </h1>
         <div
           className={`mt-8 h-2 bg-yellow-500 rounded-full ${
-            isExiting ? "w-0 opacity-0 transition-all duration-1000" : "underline-reveal"
+            isExiting
+              ? "w-0 opacity-0 transition-all duration-1000"
+              : "underline-reveal"
           }`}
           style={{ background: "linear-gradient(90deg, #f59e0b, #fbbf24)" }}
         ></div>
 
         {/* Security indicator dots */}
-        <div className={`mt-6 flex gap-2 glow-in ${isExiting ? "opacity-0" : ""}`}>
+        <div
+          className={`mt-6 flex gap-2 glow-in ${isExiting ? "opacity-0" : ""}`}
+        >
           <div className="security-dot"></div>
-          <div className="security-dot" style={{ animationDelay: "0.2s" }}></div>
-          <div className="security-dot" style={{ animationDelay: "0.4s" }}></div>
+          <div
+            className="security-dot"
+            style={{ animationDelay: "0.2s" }}
+          ></div>
+          <div
+            className="security-dot"
+            style={{ animationDelay: "0.4s" }}
+          ></div>
         </div>
       </div>
     </div>
