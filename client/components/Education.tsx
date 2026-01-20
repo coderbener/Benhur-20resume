@@ -27,13 +27,14 @@ export default function Education() {
   ];
 
   return (
-    <section id="education" className="bg-gradient-to-b from-blue-900 to-slate-900 py-24 px-4 sm:px-6 lg:px-8">
+    <section id="education" className="py-24 px-4 sm:px-6 lg:px-8 relative"
+      style={{ background: "linear-gradient(180deg, #0f172a 0%, #1e293b 100%)" }}>
       <div className="max-w-5xl mx-auto">
         {/* Heading */}
-        <h2 className="text-4xl sm:text-5xl md:text-5xl font-bold tracking-tight mb-4 bg-gradient-to-r from-emerald-300 to-amber-300 bg-clip-text text-transparent">
-          Education
+        <h2 className="text-4xl sm:text-5xl md:text-5xl font-bold tracking-tight mb-4 text-white">
+          <span className="text-yellow-300">Education</span>
         </h2>
-        <p className="text-gray-400 font-sans text-base mb-16">
+        <p className="text-slate-400 font-sans text-base mb-16">
           Academic journey and achievements.
         </p>
 
@@ -42,27 +43,36 @@ export default function Education() {
           {educationItems.map((item) => (
             <div
               key={item.id}
-              className="group bg-gradient-to-br from-slate-800/50 to-blue-900/50 backdrop-blur-md p-8 sm:p-10 rounded-2xl border border-emerald-500/30 hover:border-emerald-500/60 hover:shadow-xl hover:shadow-emerald-500/20 transition-all duration-300"
+              className="group p-8 sm:p-10 rounded-2xl border transition-all duration-300 hover:-translate-y-1"
+              style={{ borderColor: "rgba(245, 158, 11, 0.3)", background: "rgba(30, 41, 59, 0.5)" }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.borderColor = "rgba(245, 158, 11, 0.6)";
+                e.currentTarget.style.boxShadow = "0 0 30px rgba(245, 158, 11, 0.2)";
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.borderColor = "rgba(245, 158, 11, 0.3)";
+                e.currentTarget.style.boxShadow = "0 0 0";
+              }}
             >
               <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4 mb-4">
                 <div className="flex-grow">
-                  <h3 className="text-2xl sm:text-2xl font-bold text-white group-hover:text-emerald-200 transition-colors">
+                  <h3 className="text-2xl sm:text-2xl font-bold text-white group-hover:text-yellow-200 transition-colors">
                     {item.degree}
                   </h3>
-                  <p className="text-emerald-300 font-sans font-semibold text-base mt-2">
+                  <p className="text-yellow-300 font-sans font-semibold text-base mt-2">
                     {item.institution}
                   </p>
-                  <p className="text-gray-400 font-sans text-sm mt-1">
+                  <p className="text-slate-400 font-sans text-sm mt-1">
                     {item.location}
                   </p>
                 </div>
                 <div className="text-right">
-                  <p className="text-amber-300 font-sans font-semibold text-base whitespace-nowrap">
+                  <p className="text-yellow-300 font-sans font-semibold text-base whitespace-nowrap">
                     {item.period}
                   </p>
                 </div>
               </div>
-              <p className="text-gray-300 font-sans text-base">{item.details}</p>
+              <p className="text-slate-300 font-sans text-base">{item.details}</p>
             </div>
           ))}
         </div>
