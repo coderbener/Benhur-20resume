@@ -19,14 +19,15 @@ export default function Certifications() {
   return (
     <section
       id="certifications"
-      className="bg-black py-24 px-4 sm:px-6 lg:px-8"
+      className="py-24 px-4 sm:px-6 lg:px-8 relative"
+      style={{ background: "linear-gradient(180deg, #0f172a 0%, #1e293b 100%)" }}
     >
       <div className="max-w-5xl mx-auto">
         {/* Heading */}
         <h2 className="text-4xl sm:text-5xl md:text-5xl font-bold tracking-tight mb-4 text-white">
-          Certifications
+          <span className="text-yellow-300">Certifications</span>
         </h2>
-        <p className="text-gray-400 font-sans text-base mb-16">
+        <p className="text-slate-400 font-sans text-base mb-16">
           Professional credentials and recognized achievements.
         </p>
 
@@ -35,15 +36,24 @@ export default function Certifications() {
           {certifications.map((cert) => (
             <div
               key={cert.id}
-              className="group relative p-8 sm:p-10 rounded-lg border border-white/20 bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm hover:border-white/40 hover:shadow-xl hover:shadow-white/10 hover:-translate-y-1 transition-all duration-300"
+              className="group relative p-8 sm:p-10 rounded-lg border transition-all duration-300 hover:-translate-y-1"
+              style={{ background: "rgba(30, 41, 59, 0.5)", borderColor: "rgba(245, 158, 11, 0.3)" }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.borderColor = "rgba(245, 158, 11, 0.6)";
+                e.currentTarget.style.boxShadow = "0 0 30px rgba(245, 158, 11, 0.2)";
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.borderColor = "rgba(245, 158, 11, 0.3)";
+                e.currentTarget.style.boxShadow = "0 0 0";
+              }}
             >
-              <p className="text-gray-300 font-sans font-semibold text-base mb-3 tracking-wide">
+              <p className="text-yellow-300 font-sans font-semibold text-base mb-3 tracking-wide">
                 {cert.issuer}
               </p>
-              <h3 className="text-2xl sm:text-2xl font-bold text-white mb-4 group-hover:text-gray-200 transition-colors">
+              <h3 className="text-2xl sm:text-2xl font-bold text-white mb-4 group-hover:text-yellow-200 transition-colors">
                 {cert.title}
               </h3>
-              <p className="text-gray-300 font-sans text-base">
+              <p className="text-slate-300 font-sans text-base">
                 {cert.description}
               </p>
             </div>
