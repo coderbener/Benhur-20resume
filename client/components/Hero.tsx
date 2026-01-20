@@ -66,7 +66,7 @@ export default function Hero() {
 
         {/* Scroll Indicator */}
         <div className="flex justify-center mt-16 animate-bounce">
-          <ChevronDown className="w-6 h-6 text-yellow-400 hover:text-yellow-300 transition-colors" />
+          <ChevronDown className="w-6 h-6 text-red-400 hover:text-red-300 transition-colors" />
         </div>
       </div>
     </section>
