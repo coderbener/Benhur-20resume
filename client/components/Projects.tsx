@@ -33,13 +33,14 @@ export default function Projects() {
   ];
 
   return (
-    <section id="projects" className="bg-gradient-to-b from-slate-900 to-blue-900 py-24 px-4 sm:px-6 lg:px-8">
+    <section id="projects" className="py-24 px-4 sm:px-6 lg:px-8 relative"
+      style={{ background: "linear-gradient(180deg, #1e293b 0%, #0f172a 100%)" }}>
       <div className="max-w-7xl mx-auto">
         {/* Heading */}
-        <h2 className="text-4xl sm:text-5xl md:text-5xl font-bold tracking-tight mb-4 bg-gradient-to-r from-emerald-300 to-amber-300 bg-clip-text text-transparent">
-          Featured Projects
+        <h2 className="text-4xl sm:text-5xl md:text-5xl font-bold tracking-tight mb-4 text-white">
+          Featured <span className="text-yellow-300">Projects</span>
         </h2>
-        <p className="text-gray-400 font-sans text-base mb-16 max-w-2xl">
+        <p className="text-slate-400 font-sans text-base mb-16 max-w-2xl">
           Innovative solutions demonstrating expertise in computer vision, web development, and cybersecurity.
         </p>
 
@@ -48,32 +49,43 @@ export default function Projects() {
           {projects.map((project) => (
             <div
               key={project.id}
-              className="group relative overflow-hidden rounded-2xl transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-emerald-500/30 border border-emerald-500/30 bg-slate-800/40 backdrop-blur-md hover:bg-slate-800/50"
+              className="group relative overflow-hidden rounded-2xl transition-all duration-500 hover:-translate-y-2 border"
+              style={{ borderColor: "rgba(245, 158, 11, 0.3)", background: "rgba(30, 41, 59, 0.5)", boxShadow: "0 0 0 rgba(245, 158, 11, 0)" }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.boxShadow = "0 0 30px rgba(245, 158, 11, 0.3)";
+                e.currentTarget.style.borderColor = "rgba(245, 158, 11, 0.6)";
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.boxShadow = "0 0 0 rgba(245, 158, 11, 0)";
+                e.currentTarget.style.borderColor = "rgba(245, 158, 11, 0.3)";
+              }}
             >
               {/* Project Image */}
-              <div className="relative h-64 sm:h-80 overflow-hidden bg-gradient-to-br from-slate-700 to-blue-900">
+              <div className="relative h-64 sm:h-80 overflow-hidden"
+                   style={{ background: "linear-gradient(135deg, #1e293b, #0f172a)" }}>
                 <img
                   src={project.image}
                   alt={project.title}
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity"></div>
+                <div className="absolute inset-0 group-hover:opacity-40 transition-opacity"
+                     style={{ background: "linear-gradient(to top, rgba(15, 23, 42, 0.9), transparent)", opacity: "0.6" }}></div>
               </div>
 
               {/* Project Content */}
               <div className="p-8 sm:p-10 relative z-10">
                 {/* Technologies */}
-                <p className="text-emerald-300 font-sans font-semibold text-sm mb-3 tracking-wide uppercase">
+                <p className="text-yellow-300 font-sans font-semibold text-sm mb-3 tracking-wide uppercase">
                   {project.technologies}
                 </p>
 
                 {/* Title */}
-                <h3 className="text-2xl sm:text-3xl font-bold text-white mb-4 group-hover:text-emerald-200 transition-colors">
+                <h3 className="text-2xl sm:text-3xl font-bold text-white mb-4 group-hover:text-yellow-200 transition-colors">
                   {project.title}
                 </h3>
 
                 {/* Description */}
-                <p className="text-gray-300 font-sans text-base leading-relaxed mb-6">
+                <p className="text-slate-300 font-sans text-base leading-relaxed mb-6">
                   {project.description}
                 </p>
 
@@ -82,9 +94,9 @@ export default function Projects() {
                   {project.highlights.map((highlight, index) => (
                     <li
                       key={index}
-                      className="text-gray-300 font-sans text-sm flex items-start gap-3"
+                      className="text-slate-300 font-sans text-sm flex items-start gap-3"
                     >
-                      <span className="text-emerald-400 mt-1 flex-shrink-0 font-bold">✓</span>
+                      <span className="text-yellow-400 mt-1 flex-shrink-0 font-bold">✓</span>
                       <span>{highlight}</span>
                     </li>
                   ))}
