@@ -15,7 +15,7 @@ export const handleContact = async (req: Request, res: Response) => {
     // 1. Validate the incoming data
     const validatedData = ContactSchema.parse(req.body);
 
-    // 2. Check for missing passwords (Prevents crashes if variables are missing)
+    // 2. Check for missing passwords
     if (!process.env.GMAIL_USER || !process.env.GMAIL_APP_PASSWORD) {
       console.error("Missing GMAIL_USER or GMAIL_APP_PASSWORD environment variables");
       res.status(500).json({
@@ -25,7 +25,7 @@ export const handleContact = async (req: Request, res: Response) => {
       return;
     }
 
-    // 3. Create the transporter INSIDE the function (Fixes 502/Crash issues)
+    // 3. Create the transporter
     const transporter = nodemailer.createTransport({
       service: "gmail",
       auth: {
@@ -37,7 +37,7 @@ export const handleContact = async (req: Request, res: Response) => {
     // 4. Send the email
     await transporter.sendMail({
       from: process.env.GMAIL_USER,
-      to: "benalyst404@gmail.com", // Your receiving email
+      to: "benalyst404@gmail.com",
       replyTo: validatedData.email,
       subject: `New Inquiry from ${validatedData.name}`,
       html: `
@@ -62,11 +62,11 @@ export const handleContact = async (req: Request, res: Response) => {
 
   } catch (error: any) {
     // Handle Zod Validation Errors
-    if (error instanceof z.ZodError) {s
+    if (error instanceof z.ZodError) {
       res.status(400).json({
         success: false,
         errors: error.errors,
-      });s
+      });
       return;
     }
 
