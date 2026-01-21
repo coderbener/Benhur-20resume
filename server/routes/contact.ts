@@ -1,6 +1,6 @@
-import { NextResponse } from 'next/server';
-import nodemailer from 'nodemailer';
-import { z } from 'zod';
+import { Request, Response } from "express"; // or your server framework types
+import { z } from "zod";
+import nodemailer from "nodemailer";
 
 // Define validation schema
 const ContactSchema = z.object({
@@ -9,24 +9,22 @@ const ContactSchema = z.object({
   message: z.string().min(1, "Message is required"),
 });
 
-export async function POST(request: Request) {
+// The server expects this specific export name: 'handleContact'
+export const handleContact = async (req: Request, res: Response) => {
   try {
-    // 1. Parse the incoming JSON data
-    const body = await request.json();
-    
-    // 2. Validate data using Zod
-    const validatedData = ContactSchema.parse(body);
+    // 1. Validate the incoming data
+    const validatedData = ContactSchema.parse(req.body);
 
-    // 3. Check environment variables (Prevents 502 Crashes)
+    // 2. Check for missing passwords (Prevents crashes)
     if (!process.env.GMAIL_USER || !process.env.GMAIL_APP_PASSWORD) {
-      console.error("Missing Env Vars");
-      return NextResponse.json(
-        { error: "Server config error: Missing email credentials" }, 
-        { status: 500 }
-      );
+      console.error("Missing GMAIL_USER or GMAIL_APP_PASSWORD environment variables");
+      return res.status(500).json({
+        success: false,
+        message: "Server configuration error: Missing email credentials.",
+      });
     }
 
-    // 4. Setup Transporter (MUST be inside the function)
+    // 3. Create the transporter INSIDE the function (Fixes 502/Crash issues)
     const transporter = nodemailer.createTransport({
       service: "gmail",
       auth: {
@@ -35,11 +33,11 @@ export async function POST(request: Request) {
       },
     });
 
-    // 5. Send the email
+    // 4. Send the email
     await transporter.sendMail({
-      from: process.env.GMAIL_USER, // Sender address (Must be your authenticated email)
-      to: "benalyst404@gmail.com",  // Destination address (Where you want to receive it)
-      replyTo: validatedData.email, // So you can hit "Reply" to answer them
+      from: process.env.GMAIL_USER,
+      to: "benalyst404@gmail.com", // Where you receive the email
+      replyTo: validatedData.email,
       subject: `New Inquiry from ${validatedData.name}`,
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
@@ -53,24 +51,27 @@ export async function POST(request: Request) {
       `,
     });
 
-    return NextResponse.json(
-      { success: true, message: "Inquiry sent successfully!" }, 
-      { status: 200 }
-    );
+    console.log("Email sent successfully for:", validatedData.name);
+
+    // 5. Send success response (Express style)
+    return res.status(200).json({
+      success: true,
+      message: "Inquiry sent successfully! We'll get back to you soon.",
+    });
 
   } catch (error: any) {
     // Handle Zod Validation Errors
     if (error instanceof z.ZodError) {
-      return NextResponse.json(
-        { success: false, errors: error.errors }, 
-        { status: 400 }
-      );
+      return res.status(400).json({
+        success: false,
+        errors: error.errors,
+      });
     }
 
     console.error("Error processing contact form:", error);
-    return NextResponse.json(
-      { success: false, message: "Error sending inquiry" }, 
-      { status: 500 }
-    );
+    return res.status(500).json({
+      success: false,
+      message: "Error sending your inquiry. Please try again.",
+    });
   }
-}
+};
