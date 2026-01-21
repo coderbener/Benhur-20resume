@@ -25,13 +25,16 @@ export default function Contact() {
     e.preventDefault();
     setIsLoading(true);
     try {
-      const response = await fetch("/api/contact", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
+      // Inside handleSubmit...
+
+// 👇 CHANGE THIS URL (Note the dot at the start)
+const response = await fetch("/.netlify/functions/contact", {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json",
+  },
+  body: JSON.stringify(formData),
+});
 
       // 1. Read the server response safely
       const contentType = response.headers.get("content-type");
