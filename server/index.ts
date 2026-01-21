@@ -1,26 +1,28 @@
-import "dotenv/config";
 import express from "express";
-import cors from "cors";
-import { handleDemo } from "./routes/demo";
-import { handleContact } from "./routes/contact";
+import { createServer as createViteServer } from "vite";
+import { handleContact } from "./routes/contact"; // Import your contact function
 
-export function createServer() {
+async function createServer() {
   const app = express();
-
-  // Middleware
-  app.use(cors());
+  
+  // 1. IMPORTANT: Allow the server to read JSON bodies
   app.use(express.json());
-  app.use(express.urlencoded({ extended: true }));
 
-  // Example API routes
-  app.get("/api/ping", (_req, res) => {
-    const ping = process.env.PING_MESSAGE ?? "ping";
-    res.json({ message: ping });
-  });
-
-  app.get("/api/demo", handleDemo);
-
+  // 2. IMPORTANT: Register the API Route BEFORE Vite
+  // This tells the server: "If the URL is /api/contact, run the email code"
   app.post("/api/contact", handleContact);
 
-  return app;
+  // 3. Setup Vite (Middleware)
+  const vite = await createViteServer({
+    server: { middlewareMode: true },
+    appType: "custom",
+  });
+
+  app.use(vite.middlewares);
+
+  app.listen(8080, () => {
+    console.log("Server running at http://localhost:8080");
+  });
 }
+
+createServer();
