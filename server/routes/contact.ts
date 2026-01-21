@@ -62,7 +62,7 @@ export const handleContact = async (req: Request, res: Response) => {
 
   } catch (error: any) {
     // Handle Zod Validation Errors
-    if (error instanceof z.ZodError) {
+    if (error instanceof z.ZodError) {s
       res.status(400).json({
         success: false,
         errors: error.errors,
