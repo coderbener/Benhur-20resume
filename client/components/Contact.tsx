@@ -20,51 +20,33 @@ export default function Contact() {
     }));
   };
 
-  // --- THIS IS THE UPDATED DEBUG FUNCTION ---
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsLoading(true);
     try {
-      // Inside handleSubmit...
+      // Confirmed working URL
+      const response = await fetch("/.netlify/functions/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
 
-// 👇 CHANGE THIS URL (Note the dot at the start)
-const response = await fetch("/.netlify/functions/contact", {
-  method: "POST",
-  headers: {
-    "Content-Type": "application/json",
-  },
-  body: JSON.stringify(formData),
-});
-
-      // 1. Read the server response safely
-      const contentType = response.headers.get("content-type");
-      let data;
-      if (contentType && contentType.includes("application/json")) {
-        data = await response.json();
-      } else {
-        // If server returns HTML (common 404/500 issue), handle it
-        throw new Error("Server returned HTML instead of JSON. Check your API route.");
-      }
-
-      // 2. Handle Success or Failure
       if (response.ok) {
         setSubmitted(true);
         setFormData({ name: "", email: "", message: "" });
+        // Reset button after 3 seconds
         setTimeout(() => setSubmitted(false), 3000);
-        alert("✅ Email Sent Successfully!");
       } else {
-        // Show the exact error from the server
-        console.error("Server Error:", data);
-        alert(`❌ FAILED: ${data.message || "Unknown Server Error"}`);
+        console.error("Server returned an error");
       }
-    } catch (error: any) {
-      console.error("Network Error:", error);
-      alert(`❌ NETWORK ERROR: ${error.message}`);
+    } catch (error) {
+      console.error("Error sending inquiry:", error);
     } finally {
       setIsLoading(false);
     }
   };
-  // ----------------------------------------
 
   return (
     <section
@@ -102,6 +84,14 @@ const response = await fetch("/.netlify/functions/contact", {
                     background: "rgba(30, 41, 59, 0.7)",
                     border: "1px solid rgba(245, 158, 11, 0.3)",
                   }}
+                  onFocus={(e) => {
+                    e.currentTarget.style.borderColor = "rgba(245, 158, 11, 0.6)";
+                    e.currentTarget.style.boxShadow = "0 0 12px rgba(245, 158, 11, 0.2)";
+                  }}
+                  onBlur={(e) => {
+                    e.currentTarget.style.borderColor = "rgba(245, 158, 11, 0.3)";
+                    e.currentTarget.style.boxShadow = "0 0 0";
+                  }}
                 />
               </div>
 
@@ -121,6 +111,14 @@ const response = await fetch("/.netlify/functions/contact", {
                     background: "rgba(30, 41, 59, 0.7)",
                     border: "1px solid rgba(245, 158, 11, 0.3)",
                   }}
+                  onFocus={(e) => {
+                    e.currentTarget.style.borderColor = "rgba(245, 158, 11, 0.6)";
+                    e.currentTarget.style.boxShadow = "0 0 12px rgba(245, 158, 11, 0.2)";
+                  }}
+                  onBlur={(e) => {
+                    e.currentTarget.style.borderColor = "rgba(245, 158, 11, 0.3)";
+                    e.currentTarget.style.boxShadow = "0 0 0";
+                  }}
                 />
               </div>
 
@@ -139,6 +137,14 @@ const response = await fetch("/.netlify/functions/contact", {
                   style={{
                     background: "rgba(30, 41, 59, 0.7)",
                     border: "1px solid rgba(245, 158, 11, 0.3)",
+                  }}
+                  onFocus={(e) => {
+                    e.currentTarget.style.borderColor = "rgba(245, 158, 11, 0.6)";
+                    e.currentTarget.style.boxShadow = "0 0 12px rgba(245, 158, 11, 0.2)";
+                  }}
+                  onBlur={(e) => {
+                    e.currentTarget.style.borderColor = "rgba(245, 158, 11, 0.3)";
+                    e.currentTarget.style.boxShadow = "0 0 0";
                   }}
                 />
               </div>
@@ -161,7 +167,6 @@ const response = await fetch("/.netlify/functions/contact", {
           </div>
 
           <div className="space-y-10">
-            {/* ... (Social Links / Rest of the UI remains the same) ... */}
             <div>
               <div className="flex items-start gap-4 group">
                 <div className="w-12 h-12 rounded-lg flex items-center justify-center flex-shrink-0 border transition-all" style={{background: "rgba(245, 158, 11, 0.1)", borderColor: "rgba(245, 158, 11, 0.3)"}}>
@@ -174,7 +179,6 @@ const response = await fetch("/.netlify/functions/contact", {
               </div>
             </div>
             
-             {/* Phone */}
             <div>
               <div className="flex items-start gap-4 group">
                 <div className="w-12 h-12 rounded-lg flex items-center justify-center flex-shrink-0 border transition-all" style={{background: "rgba(245, 158, 11, 0.1)", borderColor: "rgba(245, 158, 11, 0.3)"}}>
@@ -187,7 +191,6 @@ const response = await fetch("/.netlify/functions/contact", {
               </div>
             </div>
 
-             {/* Socials */}
             <div>
                <p className="text-slate-300 font-sans text-sm mb-6 font-semibold">Connect With Me</p>
                <div className="flex gap-4">
@@ -198,6 +201,11 @@ const response = await fetch("/.netlify/functions/contact", {
                      <Github className="w-5 h-5" />
                   </a>
                </div>
+               <div className="mt-8">
+                  <a href="https://tryhackme.com/p/benhuratwork" target="_blank" rel="noopener noreferrer" className="inline-block px-5 py-2 bg-yellow-500 hover:bg-yellow-400 text-slate-900 rounded-lg transition-all font-sans text-sm font-medium hover:scale-105" style={{ boxShadow: "0 0 15px rgba(245, 158, 11, 0.3)" }}>
+                    TryHackMe Profile
+                  </a>
+              </div>
             </div>
 
           </div>
