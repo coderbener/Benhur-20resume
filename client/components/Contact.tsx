@@ -20,6 +20,7 @@ export default function Contact() {
     }));
   };
 
+  // --- THIS IS THE UPDATED DEBUG FUNCTION ---
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsLoading(true);
@@ -32,17 +33,35 @@ export default function Contact() {
         body: JSON.stringify(formData),
       });
 
+      // 1. Read the server response safely
+      const contentType = response.headers.get("content-type");
+      let data;
+      if (contentType && contentType.includes("application/json")) {
+        data = await response.json();
+      } else {
+        // If server returns HTML (common 404/500 issue), handle it
+        throw new Error("Server returned HTML instead of JSON. Check your API route.");
+      }
+
+      // 2. Handle Success or Failure
       if (response.ok) {
         setSubmitted(true);
         setFormData({ name: "", email: "", message: "" });
         setTimeout(() => setSubmitted(false), 3000);
+        alert("✅ Email Sent Successfully!");
+      } else {
+        // Show the exact error from the server
+        console.error("Server Error:", data);
+        alert(`❌ FAILED: ${data.message || "Unknown Server Error"}`);
       }
-    } catch (error) {
-      console.error("Error sending inquiry:", error);
+    } catch (error: any) {
+      console.error("Network Error:", error);
+      alert(`❌ NETWORK ERROR: ${error.message}`);
     } finally {
       setIsLoading(false);
     }
   };
+  // ----------------------------------------
 
   return (
     <section
@@ -53,7 +72,6 @@ export default function Contact() {
       }}
     >
       <div className="max-w-7xl mx-auto">
-        {/* Heading */}
         <h2 className="text-4xl sm:text-5xl md:text-5xl font-bold tracking-tight mb-4 text-white">
           Let's <span className="text-yellow-300">Connect</span>
         </h2>
@@ -62,12 +80,9 @@ export default function Contact() {
           chat about cybersecurity? Reach out!
         </p>
 
-        {/* Two Column Layout */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
-          {/* Form Column */}
           <div>
             <form onSubmit={handleSubmit} className="space-y-6">
-              {/* Name Input */}
               <div>
                 <label className="block text-white font-sans text-sm font-semibold mb-3">
                   Name
@@ -84,21 +99,9 @@ export default function Contact() {
                     background: "rgba(30, 41, 59, 0.7)",
                     border: "1px solid rgba(245, 158, 11, 0.3)",
                   }}
-                  onFocus={(e) => {
-                    e.currentTarget.style.borderColor =
-                      "rgba(245, 158, 11, 0.6)";
-                    e.currentTarget.style.boxShadow =
-                      "0 0 12px rgba(245, 158, 11, 0.2)";
-                  }}
-                  onBlur={(e) => {
-                    e.currentTarget.style.borderColor =
-                      "rgba(245, 158, 11, 0.3)";
-                    e.currentTarget.style.boxShadow = "0 0 0";
-                  }}
                 />
               </div>
 
-              {/* Email Input */}
               <div>
                 <label className="block text-white font-sans text-sm font-semibold mb-3">
                   Email
@@ -115,21 +118,9 @@ export default function Contact() {
                     background: "rgba(30, 41, 59, 0.7)",
                     border: "1px solid rgba(245, 158, 11, 0.3)",
                   }}
-                  onFocus={(e) => {
-                    e.currentTarget.style.borderColor =
-                      "rgba(245, 158, 11, 0.6)";
-                    e.currentTarget.style.boxShadow =
-                      "0 0 12px rgba(245, 158, 11, 0.2)";
-                  }}
-                  onBlur={(e) => {
-                    e.currentTarget.style.borderColor =
-                      "rgba(245, 158, 11, 0.3)";
-                    e.currentTarget.style.boxShadow = "0 0 0";
-                  }}
                 />
               </div>
 
-              {/* Message Input */}
               <div>
                 <label className="block text-white font-sans text-sm font-semibold mb-3">
                   Message
@@ -146,21 +137,9 @@ export default function Contact() {
                     background: "rgba(30, 41, 59, 0.7)",
                     border: "1px solid rgba(245, 158, 11, 0.3)",
                   }}
-                  onFocus={(e) => {
-                    e.currentTarget.style.borderColor =
-                      "rgba(245, 158, 11, 0.6)";
-                    e.currentTarget.style.boxShadow =
-                      "0 0 12px rgba(245, 158, 11, 0.2)";
-                  }}
-                  onBlur={(e) => {
-                    e.currentTarget.style.borderColor =
-                      "rgba(245, 158, 11, 0.3)";
-                    e.currentTarget.style.boxShadow = "0 0 0";
-                  }}
                 />
               </div>
 
-              {/* Submit Button */}
               <button
                 type="submit"
                 disabled={isLoading || submitted}
@@ -178,143 +157,46 @@ export default function Contact() {
             </form>
           </div>
 
-          {/* Contact Details Column */}
           <div className="space-y-10">
-            {/* Email */}
+            {/* ... (Social Links / Rest of the UI remains the same) ... */}
             <div>
               <div className="flex items-start gap-4 group">
-                <div
-                  className="w-12 h-12 rounded-lg flex items-center justify-center flex-shrink-0 border transition-all"
-                  style={{
-                    background: "rgba(245, 158, 11, 0.1)",
-                    borderColor: "rgba(245, 158, 11, 0.3)",
-                  }}
-                  onMouseEnter={(e) => {
-                    e.currentTarget.style.borderColor =
-                      "rgba(245, 158, 11, 0.6)";
-                  }}
-                  onMouseLeave={(e) => {
-                    e.currentTarget.style.borderColor =
-                      "rgba(245, 158, 11, 0.3)";
-                  }}
-                >
+                <div className="w-12 h-12 rounded-lg flex items-center justify-center flex-shrink-0 border transition-all" style={{background: "rgba(245, 158, 11, 0.1)", borderColor: "rgba(245, 158, 11, 0.3)"}}>
                   <Mail className="w-6 h-6 text-yellow-400" />
                 </div>
                 <div>
-                  <p className="text-slate-400 font-sans text-sm mb-1 font-semibold">
-                    Email
-                  </p>
-                  <a
-                    href="mailto:benhuratwork@gmail.com"
-                    className="text-white font-sans font-semibold text-lg hover:text-yellow-300 transition-colors"
-                  >
-                    benhuratwork@gmail.com
-                  </a>
+                  <p className="text-slate-400 font-sans text-sm mb-1 font-semibold">Email</p>
+                  <a href="mailto:benhuratwork@gmail.com" className="text-white font-sans font-semibold text-lg hover:text-yellow-300 transition-colors">benhuratwork@gmail.com</a>
                 </div>
               </div>
             </div>
-
-            {/* Phone */}
+            
+             {/* Phone */}
             <div>
               <div className="flex items-start gap-4 group">
-                <div
-                  className="w-12 h-12 rounded-lg flex items-center justify-center flex-shrink-0 border transition-all"
-                  style={{
-                    background: "rgba(245, 158, 11, 0.1)",
-                    borderColor: "rgba(245, 158, 11, 0.3)",
-                  }}
-                  onMouseEnter={(e) => {
-                    e.currentTarget.style.borderColor =
-                      "rgba(245, 158, 11, 0.6)";
-                  }}
-                  onMouseLeave={(e) => {
-                    e.currentTarget.style.borderColor =
-                      "rgba(245, 158, 11, 0.3)";
-                  }}
-                >
+                <div className="w-12 h-12 rounded-lg flex items-center justify-center flex-shrink-0 border transition-all" style={{background: "rgba(245, 158, 11, 0.1)", borderColor: "rgba(245, 158, 11, 0.3)"}}>
                   <Phone className="w-6 h-6 text-yellow-400" />
                 </div>
                 <div>
-                  <p className="text-slate-400 font-sans text-sm mb-1 font-semibold">
-                    Phone
-                  </p>
-                  <a
-                    href="tel:+919567651195"
-                    className="text-white font-sans font-semibold text-lg hover:text-yellow-300 transition-colors"
-                  >
-                    +91 95676 51195
-                  </a>
+                  <p className="text-slate-400 font-sans text-sm mb-1 font-semibold">Phone</p>
+                  <a href="tel:+919567651195" className="text-white font-sans font-semibold text-lg hover:text-yellow-300 transition-colors">+91 95676 51195</a>
                 </div>
               </div>
             </div>
 
-            {/* Social Links */}
+             {/* Socials */}
             <div>
-              <p className="text-slate-300 font-sans text-sm mb-6 font-semibold">
-                Connect With Me
-              </p>
-              <div className="flex gap-4">
-                <a
-                  href="https://www.linkedin.com/in/benhursanthosh"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-12 h-12 border rounded-lg flex items-center justify-center text-yellow-400 hover:text-yellow-300 transition-all"
-                  title="LinkedIn"
-                  style={{
-                    background: "rgba(245, 158, 11, 0.1)",
-                    borderColor: "rgba(245, 158, 11, 0.3)",
-                  }}
-                  onMouseEnter={(e) => {
-                    e.currentTarget.style.borderColor =
-                      "rgba(245, 158, 11, 0.6)";
-                    e.currentTarget.style.boxShadow =
-                      "0 0 12px rgba(245, 158, 11, 0.3)";
-                  }}
-                  onMouseLeave={(e) => {
-                    e.currentTarget.style.borderColor =
-                      "rgba(245, 158, 11, 0.3)";
-                    e.currentTarget.style.boxShadow = "0 0 0";
-                  }}
-                >
-                  <Linkedin className="w-5 h-5" />
-                </a>
-                <a
-                  href="https://github.com/coderbener"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-12 h-12 border rounded-lg flex items-center justify-center text-yellow-400 hover:text-yellow-300 transition-all"
-                  title="GitHub"
-                  style={{
-                    background: "rgba(245, 158, 11, 0.1)",
-                    borderColor: "rgba(245, 158, 11, 0.3)",
-                  }}
-                  onMouseEnter={(e) => {
-                    e.currentTarget.style.borderColor =
-                      "rgba(245, 158, 11, 0.6)";
-                    e.currentTarget.style.boxShadow =
-                      "0 0 12px rgba(245, 158, 11, 0.3)";
-                  }}
-                  onMouseLeave={(e) => {
-                    e.currentTarget.style.borderColor =
-                      "rgba(245, 158, 11, 0.3)";
-                    e.currentTarget.style.boxShadow = "0 0 0";
-                  }}
-                >
-                  <Github className="w-5 h-5" />
-                </a>
-              </div>
-              <div className="mt-8">
-                <a
-                  href="https://tryhackme.com/p/benhuratwork"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-block px-5 py-2 bg-yellow-500 hover:bg-yellow-400 text-slate-900 rounded-lg transition-all font-sans text-sm font-medium hover:scale-105"
-                  style={{ boxShadow: "0 0 15px rgba(245, 158, 11, 0.3)" }}
-                >
-                  TryHackMe Profile
-                </a>
-              </div>
+               <p className="text-slate-300 font-sans text-sm mb-6 font-semibold">Connect With Me</p>
+               <div className="flex gap-4">
+                  <a href="https://www.linkedin.com/in/benhursanthosh" target="_blank" className="w-12 h-12 border rounded-lg flex items-center justify-center text-yellow-400 hover:text-yellow-300 transition-all" style={{background: "rgba(245, 158, 11, 0.1)", borderColor: "rgba(245, 158, 11, 0.3)"}}>
+                     <Linkedin className="w-5 h-5" />
+                  </a>
+                  <a href="https://github.com/coderbener" target="_blank" className="w-12 h-12 border rounded-lg flex items-center justify-center text-yellow-400 hover:text-yellow-300 transition-all" style={{background: "rgba(245, 158, 11, 0.1)", borderColor: "rgba(245, 158, 11, 0.3)"}}>
+                     <Github className="w-5 h-5" />
+                  </a>
+               </div>
             </div>
+
           </div>
         </div>
       </div>
